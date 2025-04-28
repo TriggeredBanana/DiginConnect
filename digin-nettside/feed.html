@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiginConnect - Activity Feed</title>
+    <link rel="stylesheet" href="css/feed.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="\images\DiginConnectLogo.png" alt="Digin Connect">
+            </div>
+            <div class="nav-menu">
+                <a href="feed.html" class="nav-item active">Activity Feed</a>
+                <a href="messages.html" class="nav-item">Messages</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="companies.html" class="nav-item">Companies</a>
+            </div>
+            <div class="user-profile">
+                <span>Daniel</span>
+                <div class="avatar">D</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Left Column - Recent Contacts -->
+            <div class="left-column">
+                <h2 class="column-title">Recent Contacts</h2>
+                <div class="contact-card">
+                    <img src="/api/placeholder/50/50" alt="Sigurd Brekke" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name">Sigurd Brekke</div>
+                        <div class="contact-title">IT-Consultant</div>
+                        <button class="btn">Message</button>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <img src="/api/placeholder/50/50" alt="Emil Kaasa" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name">Emil Kaasa</div>
+                        <div class="contact-title">Senior Developer</div>
+                        <button class="btn">Message</button>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <img src="/api/placeholder/50/50" alt="Maja Hansen" class="contact-avatar">
+                    <div class="contact-info">
+                        <div class="contact-name">Maja Hansen</div>
+                        <div class="contact-title">Project Manager</div>
+                        <button class="btn">Message</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Middle Column - Activity Feed -->
+            <div class="middle-column">
+                <h2 class="column-title">Activity Feed</h2>
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search in feed...">
+                </div>
+
+                <div class="feed-card">
+                    <div class="feed-header">
+                        <div class="header-left">
+                            <div class="company-logo webstep-logo">W</div>
+                            <div class="company-info">
+                                <div class="company-name">Webstep</div>
+                                <div class="post-time">36 minutes ago</div>
+                            </div>
+                        </div>
+                        <div class="share-options">
+                            <span>🔗</span>
+                            <span>⋯</span>
+                        </div>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-title">🚀 Nytt prosjekt i gang!</div>
+                        <p>Vi er stolte av å samarbeide med en offentlig aktør for å utvikle en ny plattform for saksbehandling. Fokus: Bruker-vennlighet, sikkerhet og skattebarheit. Vi gleder oss til å dele mer etter hvert!</p>
+                    </div>
+                    <div class="feed-actions">
+                        <button class="action-btn">❤️ Like</button>
+                        <button class="action-btn">💬 Comment</button>
+                        <div style="margin-left: auto;">
+                            <button class="action-btn">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-card">
+                    <div class="feed-header">
+                        <div class="header-left">
+                            <div class="company-logo egde-logo">E</div>
+                            <div class="company-info">
+                                <div class="company-name">Egde</div>
+                                <div class="post-time">2 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="share-options">
+                            <span>🔗</span>
+                            <span>⋯</span>
+                        </div>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-title">💡 Innovasjon i praksis</div>
+                        <p>Vi har akkurat levert en prototype for sanntidsdataanalyse til energisektoren. Innsikt og bærekraft går hånd i hånd – og dette er bare starten.</p>
+                    </div>
+                    <div class="feed-actions">
+                        <button class="action-btn">❤️ Like</button>
+                        <button class="action-btn">💬 Comment</button>
+                        <div style="margin-left: auto;">
+                            <button class="action-btn">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-card">
+                    <div class="feed-header">
+                        <div class="header-left">
+                            <div class="company-logo crayon-logo">C</div>
+                            <div class="company-info">
+                                <div class="company-name">Crayon</div>
+                                <div class="post-time">7 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="share-options">
+                            <span>🔗</span>
+                            <span>⋯</span>
+                        </div>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-title">☁️ Cloud-migrering for fremtiden!</div>
+                        <p>Et nytt migreringsprosjekt er sparket i gang! Vi hjelper en stor kunde over til Azure, med mål om økt effektivitet og kostnadskontroll.</p>
+                    </div>
+                    <div class="feed-actions">
+                        <button class="action-btn">❤️ Like</button>
+                        <button class="action-btn">💬 Comment</button>
+                        <div style="margin-left: auto;">
+                            <button class="action-btn">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-card">
+                    <div class="feed-header">
+                        <div class="header-left">
+                            <img src="/api/placeholder/40/40" alt="Per Pedersen" class="company-logo" style="border-radius: 50%;">
+                            <div class="company-info">
+                                <div class="company-name">Per Pedersen</div>
+                                <div class="post-time">11 hours ago</div>
+                            </div>
+                        </div>
+                        <div class="share-options">
+                            <span>🔗</span>
+                            <span>⋯</span>
+                        </div>
+                    </div>
+                    <div class="feed-content">
+                        <div class="feed-title">👏 Stort konsulent prosjekt!</div>
+                        <p>Bli med på en spennende reise der du får kombinere teknologi og samfunnsnytte. Vi søker etter dyktige utviklere med kompetanse innen cloud og AI som ønsker å bidra til et prosjekt som kan transformere hvordan vi tenker om digital infrastruktur.</p>
+                    </div>
+                    <div class="feed-actions">
+                        <button class="action-btn">❤️ Like</button>
+                        <button class="action-btn">💬 Comment</button>
+                        <div style="margin-left: auto;">
+                            <button class="action-btn">📤 Share</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Recent Projects -->
+            <div class="right-column">
+                <h2 class="column-title">Recent Projects</h2>
+                <div class="project-card">
+                    <div class="company-logo egde-logo">E</div>
+                    <div class="contact-info">
+                        <div class="project-name">Data Analysis Platform</div>
+                        <div class="project-role">Role: IT Consultant</div>
+                        <div class="project-company">Egde</div>
+                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="company-logo crayon-logo">C</div>
+                    <div class="contact-info">
+                        <div class="project-name">AI Research Sustainability</div>
+                        <div class="project-role">Role: Senior Developer</div>
+                        <div class="project-company">Crayon</div>
+                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="company-logo webstep-logo">W</div>
+                    <div class="contact-info">
+                        <div class="project-name">Server To Cloud Migration</div>
+                        <div class="project-role">Role: Cloud Expert</div>
+                        <div class="project-company">Webstep</div>
+                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="company-logo crayon-logo">C</div>
+                    <div class="contact-info">
+                        <div class="project-name">UX/UI Redesign</div>
+                        <div class="project-role">Role: Senior Developer</div>
+                        <div class="project-company">Crayon</div>
+                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/feed.js"></script>
+</body>
+</html>

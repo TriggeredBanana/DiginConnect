@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiginConnect - Messages</title>
+    <link rel="stylesheet" href="css/messages.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="\images\DiginConnectLogo.png" alt="Digin Connect">
+            </div>
+            <div class="nav-menu">
+                <a href="feed.html" class="nav-item">Activity Feed</a>
+                <a href="messages.html" class="nav-item active">Messages</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="companies.html" class="nav-item">Companies</a>
+            </div>
+            <div class="user-profile">
+                <span>Daniel</span>
+                <div class="avatar">D</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2 class="sidebar-title">Messages</h2>
+                <div class="sidebar-menu">
+                    <a href="#" class="sidebar-item active" data-folder="inbox">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-6l-2 3h-4l-2-3H2"></path>
+                                <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                            </svg>
+                        </div>
+                        <span>Inbox</span>
+                        <span class="badge badge-primary">2</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-folder="starred">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <span>Starred</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-folder="snoozed">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <span>Snoozed</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-folder="sent">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </div>
+                        <span>Sent</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-folder="drafts">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                            </svg>
+                        </div>
+                        <span>Drafts</span>
+                    </a>
+                    <div class="sidebar-divider"></div>
+                    <a href="#" class="sidebar-item" data-folder="labels">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                            </svg>
+                        </div>
+                        <span>Manage Labels</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Messages Content -->
+            <div class="messages-container">
+                <div class="messages-header">
+                    <div class="header-left">
+                        <h1 class="messages-title">Inbox</h1>
+                        <div class="messages-count">6 messages</div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="header-action" title="Refresh">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 4v6h-6"></path>
+                                <path d="M1 20v-6h6"></path>
+                                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"></path>
+                                <path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"></path>
+                            </svg>
+                        </button>
+                        <button class="header-action" title="More options">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="1"></circle>
+                                <circle cx="19" cy="12" r="1"></circle>
+                                <circle cx="5" cy="12" r="1"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="toolbar">
+                    <div class="content-tabs">
+                        <button class="active">All messages</button>
+                        <button>Users</button>
+                        <button>Companies</button>
+                        <button>Projects</button>
+                    </div>
+                    <div class="sort-options">
+                        <button class="sort-btn" title="Sort">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="7 11 12 6 17 11"></polyline>
+                                <polyline points="7 17 12 12 17 17"></polyline>
+                            </svg>
+                            Sort: Date
+                            <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="search-bar">
+                    <span class="search-icon">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </span>
+                    <input type="text" placeholder="Search messages...">
+                    <button class="search-clear" title="Clear search">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="message-list">
+                    <li class="message-item unread">
+                        <div class="message-actions">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="star-btn" title="Mark as starred">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="sender-icon icon-e">E</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Egde</span>
+                                <span class="message-time">12:11</span>
+                            </div>
+                            <div class="message-body">
+                                <h4 class="message-subject">Forespørsel om deltakelse i SmartCityPilot 2025</h4>
+                                <p class="message-preview">Hei Daniel, Vi i Egde arbeider nå med "SmartCityPilot 2025" - et samarbeid med tre norske kommuner for å teste digitale tjenester/verktøy som måler luftkvalitet og trafikflyt i sanntid. Deltakelsen deres kunne gjort en stor forskjell til en eller to monteringspunkter på eksisterende lyktestolper. Vi ser for...</p>
+                            </div>
+                        </div>
+                        <div class="message-options">
+                            <button class="options-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="5" r="1"></circle>
+                                    <circle cx="12" cy="19" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="message-item">
+                        <div class="message-actions">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="star-btn" title="Mark as starred">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="sender-icon icon-w">W</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Webstep</span>
+                                <span class="message-time">24.04.2025</span>
+                            </div>
+                            <div class="message-body">
+                                <h4 class="message-subject">Forespørsel om kodeeksempel til CodeHealth-analyse</h4>
+                                <p class="message-preview">Hei Daniel! Vi forbereder neste ukes CodeHealth-workshop, hvor vi gir en gratis, helhetlig helsesjekk av et valgt Java-mikroservice. For at vi skal rekke deg innen tidsfristen, trenger vi et kort (under 200 SLOC) eksempel på tjenestens kjernefunksjon (f.eks. REST-kontroller + service-lag).</p>
+                            </div>
+                        </div>
+                        <div class="message-options">
+                            <button class="options-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="5" r="1"></circle>
+                                    <circle cx="12" cy="19" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="message-item">
+                        <div class="message-actions">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="star-btn" title="Mark as starred">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="sender-icon icon-digin">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="8.5" cy="7" r="4"></circle>
+                                <line x1="20" y1="8" x2="20" y2="14"></line>
+                                <line x1="23" y1="11" x2="17" y2="11"></line>
+                            </svg>
+                        </div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Digin</span>
+                                <span class="message-time">22.04.2025</span>
+                            </div>
+                            <div class="message-body">
+                                <h4 class="message-subject">Invitasjon: Bli med på DiginConnect-workshopen 15. mai!</h4>
+                                <p class="message-preview">Hei Daniel. Som stolt medlem i DiginConnect ønsker vi å gi deg et forhåndstitt på vår splitter-nye plattform DiginConnect - laget for at du enkelt skal finne de rette samarbeidspartnerne for kommunal drift, tekniske konsulenter og leverandører i sanntid.</p>
+                            </div>
+                        </div>
+                        <div class="message-options">
+                            <button class="options-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="5" r="1"></circle>
+                                    <circle cx="12" cy="19" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="message-item">
+                        <div class="message-actions">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="star-btn starred" title="Remove from starred">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="sender-icon icon-c">C</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Crayon</span>
+                                <span class="message-time">16.04.2025</span>
+                            </div>
+                            <div class="message-body">
+                                <h4 class="message-subject">Oppfølgingsbeskjed: LicenseOptimizer-prosjektet</h4>
+                                <p class="message-preview">Hei Daniel, takk for at du deltok i pilotrunden for vår "LicenseOptimizer"-tjeneste. For å kunne finjustere den endelige løsningen trenger vi en siste innspillsrunde for de som lastet opp data for 90 dagers bruksdata for Microsoft 365 i fjor. Kunne vi tatt en uformell prat om dine erfaringer og en foreløpig oppsummering av hvilke...</p>
+                            </div>
+                        </div>
+                        <div class="message-options">
+                            <div class="attachment-indicator" title="Contains attachment">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                                </svg>
+                            </div>
+                            <button class="options-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="5" r="1"></circle>
+                                    <circle cx="12" cy="19" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="message-item unread">
+                        <div class="message-actions">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="star-btn" title="Mark as starred">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="sender-icon icon-e">E</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Emil Kaasa</span>
+                                <span class="message-time">15.04.2025</span>
+                            </div>
+                            <div class="message-body">
+                                <h4 class="message-subject">Møtereferat: AI Research Initiative</h4>
+                                <p class="message-preview">Hei Daniel, vedlagt finner du referatet fra vårt siste møte om AI Research Initiative prosjektet. Jeg har inkludert de punktene vi diskuterte angående maskinlæring modellene og implementasjons-strategien. La meg vite om du har noen spørsmål eller om det er noe som skulle vært med som jeg glemte!</p>
+                            </div>
+                        </div>
+                        <div class="message-options">
+                            <div class="attachment-indicator" title="Contains attachment">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
+                                </svg>
+                            </div>
+                            <button class="options-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="5" r="1"></circle>
+                                    <circle cx="12" cy="19" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="message-item">
+                        <div class="message-actions">
+                            <label class="checkbox-container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                            </label>
+                            <button class="star-btn" title="Mark as starred">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="sender-icon" style="background-color: #f06292">M</div>
+                        <div class="message-content">
+                            <div class="message-header">
+                                <span class="sender-name">Maja Hansen</span>
+                                <span class="message-time">14.04.2025</span>
+                            </div>
+                            <div class="message-body">
+                                <h4 class="message-subject">Oppdatering: Cloud Sustainability Tool</h4>
+                                <p class="message-preview">Hei Daniel! Jeg ville gi deg en oppdatering på Cloud Sustainability Tool prosjektet. Vi har nå fullført første fase av implementeringen og datainnsamlingen fungerer som forventet. Nå jobber vi med visualiseringsdelen og kunne trenge ditt innspill på dashboardet. Har du mulighet til et kort møte denne uken?</p>
+                            </div>
+                        </div>
+                        <div class="message-options">
+                            <button class="options-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="12" cy="5" r="1"></circle>
+                                    <circle cx="12" cy="19" r="1"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Empty state message (hidden by default) -->
+                <div class="empty-state">
+                    <div class="empty-state-icon">
+                        <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-6l-2 3h-4l-2-3H2"></path>
+                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+                        </svg>
+                    </div>
+                    <h3>No messages found</h3>
+                    <p>Your search did not match any messages. Try adjusting your search criteria.</p>
+                    <button class="btn" id="reset-search">Clear search</button>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn" title="Previous page" disabled>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="pagination-info">
+                        1-6 of 6 messages
+                    </div>
+                    <button class="pagination-btn" title="Next page" disabled>
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Compose Message Button -->
+    <button class="compose-btn" title="Compose new message">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+    </button>
+
+    <script src="js/messages.js"></script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #00a0d2;
+    --dark-blue: #1b365d;
+    --light-gray: #f5f5f5;
+    --text-color: #333;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 680px; /* Increased from 620px to fit all content without scrolling */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.left-panel {
+    background-color: var(--white);
+    width: 50%;
+    padding: 30px 40px; /* Adjusted padding */
+    display: flex;
+    flex-direction: column;
+    /* Removed overflow-y: auto */
+}
+
+.right-panel {
+    background-color: var(--primary-color);
+    width: 50%;
+    padding: 30px 40px; /* Adjusted padding */
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    /* Removed overflow-y: auto */
+}
+
+.register-title {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    padding-top: 5px; /* Ensure title is inside container */
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group.password-group {
+    position: relative;
+}
+
+.form-group.password-group .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    cursor: pointer;
+    color: #777;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.checkbox-group input {
+    margin-right: 8px;
+    margin-top: 3px; /* Better vertical alignment with text */
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+.checkbox-group label a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    padding-bottom: 10px; /* Ensure this stays inside the container */
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 140px;
+}
+
+.promo-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    list-style-type: none;
+    margin-bottom: 25px;
+}
+
+.benefits-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: baseline;
+}
+
+.benefits-list li:before {
+    content: "•";
+    margin-right: 8px;
+}
+
+.image-container {
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 8px;
+    max-height: 180px; /* Control image height to ensure it fits */
+    object-fit: cover;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.quote-author {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .container {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .left-panel, .right-panel {
+        width: 100%;
+        padding: 30px;
+    }
+    
+    /* For mobile views, we want to make sure content doesn't get cut off */
+    .left-panel {
+        min-height: 580px;
+    }
+    
+    .right-panel {
+        min-height: 500px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    .left-panel, .right-panel {
+        padding: 20px;
+    }
+}

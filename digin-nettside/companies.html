@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiginConnect - Companies</title>
+    <link rel="stylesheet" href="css/companies.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="\images\DiginConnectLogo.png" alt="Digin Connect">
+            </div>
+            <div class="nav-menu">
+                <a href="feed.html" class="nav-item">Activity Feed</a>
+                <a href="messages.html" class="nav-item">Messages</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="companies.html" class="nav-item active">Companies</a>
+            </div>
+            <div class="user-profile">
+                <span>Daniel</span>
+                <div class="avatar">D</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2 class="sidebar-title">Categories</h2>
+                <div class="sidebar-menu">
+                    <a href="#" class="sidebar-item active" data-filter="all">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                        </div>
+                        <span>All Companies</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="consulting">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+                        </div>
+                        <span>Consulting</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="cyber-security">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <span>Cyber Security</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="development">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3L4 7l4 4"></path><path d="M16 3l4 4-4 4"></path><path d="M16 21l4-4-4-4"></path><path d="M8 21l-4-4 4-4"></path></svg>
+                        </div>
+                        <span>Development</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="cloud">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"></path></svg>
+                        </div>
+                        <span>Cloud Services</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="favorite">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L9 9H2l6 4.5L6 20l6-4.5 6 4.5-2-6.5L22 9h-7l-3-7z"></path></svg>
+                        </div>
+                        <span>My Favorites</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Companies Container -->
+            <div class="companies-container">
+                <div class="companies-header">
+                    <h1 class="companies-title">Companies</h1>
+                    <div class="search-bar">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Search companies...">
+                    </div>
+                </div>
+
+                <div class="companies-grid">
+                    <div class="company-card" data-categories="consulting,development">
+                        <div class="company-logo">
+                            <img src="\images\advantek-logo.png" alt="ADVANTEK">
+                        </div>
+                        <div class="company-content">
+                            <h3 class="company-name">ADVANTEK</h3>
+                            <p class="company-tagline">People, Passion & Performance.</p>
+                            <div class="badge-container">
+                                <span class="badge">Consulting</span>
+                                <span class="badge">Development</span>
+                            </div>
+                            <p class="company-description">Advantek Group er et ledende konsulentselskap som leverer spesialister og løsninger innen ingeniørfag og digital teknologi.</p>
+                            <button class="btn view-more">View Company</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card" data-categories="consulting">
+                        <div class="company-logo">
+                            <img src="\images\alette-lie-consultancy-logo.png" alt="Alette Lie Consultancy">
+                        </div>
+                        <div class="company-content">
+                            <h3 class="company-name">Alette Lie Consultancy</h3>
+                            <p class="company-tagline">Fokus på fremtiden.</p>
+                            <div class="badge-container">
+                                <span class="badge">Consulting</span>
+                            </div>
+                            <p class="company-description">Alette Lie Consultancy er et konsulentselskap som kombinerer dyptgående kompetanse innen rekruttering og bemanning med en innovativ tilnærming.</p>
+                            <button class="btn view-more">View Company</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card" data-categories="cyber-security,cloud">
+                        <div class="company-logo">
+                            <img src="\images\bitpro-logo.png" alt="BITPRO">
+                        </div>
+                        <div class="company-content">
+                            <h3 class="company-name">BITPRO</h3>
+                            <p class="company-tagline">Fra pioner til ledende IT-leverandør.</p>
+                            <div class="badge-container">
+                                <span class="badge">Cyber Security</span>
+                                <span class="badge">Cloud Services</span>
+                            </div>
+                            <p class="company-description">Bitpro er en ledende leverandør av skybaserte IT-, kommunikasjons- og sikkerhetsløsninger til bedrifter.</p>
+                            <button class="btn view-more">View Company</button>
+                        </div>
+                    </div>
+
+                    <div class="company-card" data-categories="development,cloud">
+                        <div class="company-logo">
+                            <img src="\images\egde-logo.png" alt="Egde">
+                        </div>
+                        <div class="company-content">
+                            <h3 class="company-name">Egde</h3>
+                            <p class="company-tagline">Tverrfaglig tilnærming til alt vi gjør.</p>
+                            <div class="badge-container">
+                                <span class="badge">Development</span>
+                                <span class="badge">Cloud Services</span>
+                            </div>
+                            <p class="company-description">Våre tverrfaglige team forener mennesker og teknologi. Sammen utvider vi horisonten for hvordan teknologi kan bidra til at virksomheter lykkes.</p>
+                            <button class="btn view-more">View Company</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more companies -->
+                    <div class="company-card" data-categories="consulting,development">
+                        <div class="company-logo">
+                            <img src="\images\webstep-logo.png" alt="Webstep">
+                        </div>
+                        <div class="company-content">
+                            <h3 class="company-name">Webstep</h3>
+                            <p class="company-tagline">Spesialister på digitalisering.</p>
+                            <div class="badge-container">
+                                <span class="badge">Consulting</span>
+                                <span class="badge">Development</span>
+                            </div>
+                            <p class="company-description">Webstep er et konsulentselskap med over 400 erfarne IT-spesialister innen systemutvikling, digitalisering og rådgivning.</p>
+                            <button class="btn view-more">View Company</button>
+                        </div>
+                    </div>
+                    
+                    <div class="company-card" data-categories="consulting,cyber-security">
+                        <div class="company-logo">
+                            <img src="\images\crayon-logo.png" alt="Crayon">
+                        </div>
+                        <div class="company-content">
+                            <h3 class="company-name">Crayon</h3>
+                            <p class="company-tagline">Software & cloud experts.</p>
+                            <div class="badge-container">
+                                <span class="badge">Consulting</span>
+                                <span class="badge">Cyber Security</span>
+                            </div>
+                            <p class="company-description">Crayon hjelper virksomheter med å bygge fundamentet for en innovativ og effektiv digital fremtid gjennom optimalisering av teknologiinvesteringer.</p>
+                            <button class="btn view-more">View Company</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empty state message (hidden by default) -->
+                <div class="empty-state">
+                    <img src="/api/placeholder/150/150?text=No Results" alt="No results">
+                    <h3>No companies found</h3>
+                    <p>Try adjusting your search or filter to find what you're looking for.</p>
+                    <button class="btn" id="reset-search">Reset Filters</button>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>...</button>
+                    <button>10</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/companies.js"></script>
+</body>
+</html>

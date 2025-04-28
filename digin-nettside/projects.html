@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiginConnect - Projects</title>
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="\images\DiginConnectLogo.png" alt="Digin Connect">
+            </div>
+            <div class="nav-menu">
+                <a href="feed.html" class="nav-item">Activity Feed</a>
+                <a href="messages.html" class="nav-item">Messages</a>
+                <a href="projects.html" class="nav-item active">Projects</a>
+                <a href="companies.html" class="nav-item">Companies</a>
+            </div>
+            <div class="user-profile">
+                <span>Daniel</span>
+                <div class="avatar">D</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2 class="sidebar-title">Projects</h2>
+                <div class="sidebar-menu">
+                    <a href="#" class="sidebar-item active" data-filter="all">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <span>All Projects</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="ongoing">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <span>Ongoing</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="completed">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <span>Completed</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="my-projects">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <span>My Projects</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="starred">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                            </svg>
+                        </div>
+                        <span>Starred</span>
+                    </a>
+                    <a href="#" class="sidebar-item" data-filter="discover">
+                        <div class="sidebar-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                        <span>Discover</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-container">
+                <div class="projects-header">
+                    <h1 class="projects-title">All Projects</h1>
+                    <div class="search-bar">
+                        <span class="search-icon">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </span>
+                        <input type="text" placeholder="Search projects...">
+                    </div>
+                    <div class="action-buttons">
+                        <button class="action-btn" title="Filter options">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                            Filter
+                        </button>
+                        <button class="action-btn" title="Sort options">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="7 11 12 6 17 11"></polyline>
+                                <polyline points="7 17 12 12 17 17"></polyline>
+                            </svg>
+                            Sort
+                        </button>
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <div class="project-card" data-categories="cloud,sustainability">
+                        <div class="project-header">
+                            <h3 class="project-title">Cloud Sustainability Tool</h3>
+                            <div class="project-logo company-logo-crayon">C</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Cloud</span>
+                                <span class="project-tag">Sustainability</span>
+                            </div>
+                            <p class="project-description">A tool for monitoring and optimizing cloud resource usage with a focus on environmental impact and sustainability metrics for large enterprises.</p>
+                            <div class="project-team">
+                                <div class="team-avatars">
+                                    <div class="team-avatar" style="background-color: #1565c0;">E</div>
+                                    <div class="team-avatar" style="background-color: #f06292;">M</div>
+                                    <div class="team-avatar" style="background-color: #414980;">D</div>
+                                </div>
+                                <span class="team-count">+2 Members</span>
+                            </div>
+                            <div class="project-dates">
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Feb 15, 2025
+                                </div>
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    May 15, 2025
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">Not Started</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="project-card" data-categories="ai,research">
+                        <div class="project-header">
+                            <h3 class="project-title">AI Research Initiative</h3>
+                            <div class="project-logo company-logo-egde">E</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">AI</span>
+                                <span class="project-tag">Research</span>
+                            </div>
+                            <p class="project-description">Leading-edge research into practical applications of machine learning for optimizing business processes and enhancing decision-making in mid-market companies.</p>
+                            <div class="project-team">
+                                <div class="team-avatars">
+                                    <div class="team-avatar" style="background-color: #414980;">D</div>
+                                    <div class="team-avatar" style="background-color: #26a69a;">E</div>
+                                    <div class="team-avatar" style="background-color: #1565c0;">H</div>
+                                </div>
+                                <span class="team-count">+4 Members</span>
+                            </div>
+                            <div class="project-dates">
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Feb 15, 2025
+                                </div>
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    May 15, 2025
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 65%"></div>
+                            </div>
+                            <span class="progress-text">65% complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="project-card" data-categories="renewable,ai">
+                        <div class="project-header">
+                            <h3 class="project-title">Renewable Energy Using AI</h3>
+                            <div class="project-logo company-logo-webstep">W</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Renewable</span>
+                                <span class="project-tag">AI</span>
+                            </div>
+                            <p class="project-description">Developing smart grid solutions using artificial intelligence to optimize energy distribution and consumption patterns in renewable energy systems.</p>
+                            <div class="project-team">
+                                <div class="team-avatars">
+                                    <div class="team-avatar" style="background-color: #5c6bc0;">B</div>
+                                    <div class="team-avatar" style="background-color: #1565c0;">E</div>
+                                    <div class="team-avatar" style="background-color: #f9a825;">J</div>
+                                </div>
+                                <span class="team-count">+9 Members</span>
+                            </div>
+                            <div class="project-dates">
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Feb 15, 2025
+                                </div>
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    May 15, 2025
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 30%"></div>
+                            </div>
+                            <span class="progress-text">30% complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4 -->
+                    <div class="project-card" data-categories="data,analysis">
+                        <div class="project-header">
+                            <h3 class="project-title">Data Trend Analysis</h3>
+                            <div class="project-logo company-logo-crayon">C</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Data Science</span>
+                                <span class="project-tag">Analytics</span>
+                            </div>
+                            <p class="project-description">Implementing advanced analytics solutions to identify meaningful patterns in large datasets, enabling more informed business decisions for retail and e-commerce sectors.</p>
+                            <div class="project-team">
+                                <div class="team-avatars">
+                                    <div class="team-avatar" style="background-color: #26a69a;">A</div>
+                                    <div class="team-avatar" style="background-color: #f06292;">M</div>
+                                    <div class="team-avatar" style="background-color: #f9a825;">O</div>
+
+                                </div>
+                                <span class="team-count">+3 Members</span>
+                            </div>
+                            <div class="project-dates">
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Feb 15, 2025
+                                </div>
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    May 15, 2025
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5 -->
+                    <div class="project-card" data-categories="ui,marketing">
+                        <div class="project-header">
+                            <h3 class="project-title">Digital Marketing UX/UI</h3>
+                            <div class="project-logo company-logo-crayon">C</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">UX/UI</span>
+                                <span class="project-tag">Marketing</span>
+                            </div>
+                            <p class="project-description">Redesigning the user experience for a digital marketing platform with focus on accessibility, conversion optimization, and modern visual design principles.</p>
+                            <div class="project-team">
+                                <div class="team-avatars">
+                                    <div class="team-avatar" style="background-color: #414980;">D</div>
+                                    <div class="team-avatar" style="background-color: #26a69a;">N</div>
+                                    <div class="team-avatar" style="background-color: #ec407a;">E</div>
+                                </div>
+                                <span class="team-count">+4 Members</span>
+                            </div>
+                            <div class="project-dates">
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Feb 15, 2025
+                                </div>
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    May 15, 2025
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                            <span class="progress-text">80% complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6 -->
+                    <div class="project-card" data-categories="collaboration,development">
+                        <div class="project-header">
+                            <h3 class="project-title">Collaborative Software Development</h3>
+                            <div class="project-logo company-logo-egde">E</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-tags">
+                                <span class="project-tag">Collaboration</span>
+                                <span class="project-tag">Development</span>
+                            </div>
+                            <p class="project-description">Building a next-generation development environment that enhances team collaboration through real-time editing, integrated communication, and AI-assisted code reviews.</p>
+                            <div class="project-team">
+                                <div class="team-avatars">
+                                    <div class="team-avatar" style="background-color: #414980;">D</div>
+                                    <div class="team-avatar" style="background-color: #5c6bc0;">B</div>
+                                    <div class="team-avatar" style="background-color: #26a69a;">K</div>
+                                </div>
+                                <span class="team-count">+7 Members</span>
+                            </div>
+                            <div class="project-dates">
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Feb 15, 2025
+                                </div>
+                                <div class="date-item">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    May 15, 2025
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-progress">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                            <span class="progress-text">50% complete</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empty state message (hidden by default) -->
+                <div class="empty-state">
+                    <svg viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="12" y1="18" x2="12" y2="12"></line>
+                        <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    <h3>No projects found</h3>
+                    <p>Try adjusting your search or filter to find what you're looking for.</p>
+                    <button class="btn" id="reset-search">Reset Filters</button>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/projects.js"></script>
+</body>
+</html>

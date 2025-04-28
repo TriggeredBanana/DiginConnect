@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiginConnect - Register</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="register-title">REGISTER</div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="fullName">Full name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group password-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group password-group">
+                    <label for="confirmPassword">Confirm password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <span class="toggle-password">👁️</span>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="termsAgreement" required>
+                    <label for="termsAgreement">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter">
+                    <label for="newsletter">I'd like to subscribe to the newsletter for updates and event invitations.</label>
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+            <div class="login-link">
+                Already have an account? <a href="login.html">Log in here!</a>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="logo">
+                <img src="/api/placeholder/140/40" alt="DiginConnect Logo">
+            </div>
+            <div class="promo-title">Bli med i DiginConnect i dag!</div>
+            <ul class="benefits-list">
+                <li>150 prosjekter initiert via DiginConnect</li>
+                <li>1200+ aktive brukere fra over 60 selskaper</li>
+                <li>75% har funnet minst én ny samarbeidspartner</li>
+                <li>12 webinarer og workshops avholdt siste år</li>
+                <li>300+ dokumenter og maler tilgjengelig i ressursbiblioteket</li>
+            </ul>
+            <div class="image-container">
+                <img src="/api/placeholder/400/200" alt="City view">
+            </div>
+            <div class="quote">"GREAT THINGS IN BUSINESS ARE NEVER DONE BY ONE PERSON. THEY'RE DONE BY A TEAM OF PEOPLE."</div>
+            <div class="quote-author">— STEVE JOBS</div>
+        </div>
+    </div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>

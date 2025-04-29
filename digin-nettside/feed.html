@@ -14,6 +14,7 @@
             </div>
             <div class="nav-menu">
                 <a href="feed.html" class="nav-item active">Activity Feed</a>
+                <a href="events.html" class="nav-item">Events</a>
                 <a href="messages.html" class="nav-item">Messages</a>
                 <a href="projects.html" class="nav-item">Projects</a>
                 <a href="companies.html" class="nav-item">Companies</a>
@@ -27,190 +28,483 @@
 
     <div class="container">
         <div class="main-content">
-            <!-- Left Column - Recent Contacts -->
+            <!-- Left Column - Network & Connections -->
             <div class="left-column">
-                <h2 class="column-title">Recent Contacts</h2>
-                <div class="contact-card">
-                    <img src="/api/placeholder/50/50" alt="Sigurd Brekke" class="contact-avatar">
-                    <div class="contact-info">
-                        <div class="contact-name">Sigurd Brekke</div>
-                        <div class="contact-title">IT-Consultant</div>
-                        <button class="btn">Message</button>
+                <div class="section-header">
+                    <h2 class="section-title">My Network</h2>
+                    <button class="btn-outline btn-sm" title="Expand your network">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                        Connect
+                    </button>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-bar">
+                        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" placeholder="Search connections...">
                     </div>
                 </div>
-                <div class="contact-card">
-                    <img src="/api/placeholder/50/50" alt="Emil Kaasa" class="contact-avatar">
-                    <div class="contact-info">
-                        <div class="contact-name">Emil Kaasa</div>
-                        <div class="contact-title">Senior Developer</div>
-                        <button class="btn">Message</button>
+                
+                <div class="connection-tabs">
+                    <button class="tab active">Recent</button>
+                    <button class="tab">Colleagues</button>
+                    <button class="tab">All</button>
+                </div>
+
+                <div class="connections-list">
+                    <div class="connection-card">
+                        <div class="connection-avatar" style="background-color: #5c6bc0;">S</div>
+                        <div class="connection-info">
+                            <div class="connection-name">Sigurd Brekke</div>
+                            <div class="connection-title">IT-Consultant</div>
+                            <button class="btn-primary btn-sm">Message</button>
+                        </div>
+                    </div>
+                    
+                    <div class="connection-card">
+                        <div class="connection-avatar" style="background-color: #26a69a;">E</div>
+                        <div class="connection-info">
+                            <div class="connection-name">Emil Kaasa</div>
+                            <div class="connection-title">Senior Developer</div>
+                            <button class="btn-primary btn-sm">Message</button>
+                        </div>
+                    </div>
+                    
+                    <div class="connection-card">
+                        <div class="connection-avatar" style="background-color: #ec407a;">M</div>
+                        <div class="connection-info">
+                            <div class="connection-name">Maja Hansen</div>
+                            <div class="connection-title">Project Manager</div>
+                            <button class="btn-primary btn-sm">Message</button>
+                        </div>
+                    </div>
+                    
+                    <div class="connection-card">
+                        <div class="connection-avatar" style="background-color: #f9a825;">J</div>
+                        <div class="connection-info">
+                            <div class="connection-name">Jon Johnson</div>
+                            <div class="connection-title">CEO, Maritim Teknologi AS</div>
+                            <button class="btn-primary btn-sm">Message</button>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-card">
-                    <img src="/api/placeholder/50/50" alt="Maja Hansen" class="contact-avatar">
-                    <div class="contact-info">
-                        <div class="contact-name">Maja Hansen</div>
-                        <div class="contact-title">Project Manager</div>
-                        <button class="btn">Message</button>
-                    </div>
-                </div>
+                
+                <button class="btn-text view-all-btn">
+                    View all connections
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
             </div>
 
             <!-- Middle Column - Activity Feed -->
             <div class="middle-column">
-                <h2 class="column-title">Activity Feed</h2>
-                <div class="search-bar">
-                    <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search in feed...">
+                <div class="section-header">
+                    <h2 class="section-title">Activity Feed</h2>
+                    <div class="feed-actions">
+                        <button class="btn-outline btn-sm" title="Filter feed">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                            Filter
+                        </button>
+                        <button class="btn-outline btn-sm" title="Refresh feed">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="1 4 1 10 7 10"></polyline>
+                                <polyline points="23 20 23 14 17 14"></polyline>
+                                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                            </svg>
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-bar">
+                        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" placeholder="Search in feed...">
+                    </div>
+                </div>
+
+                <div class="compose-box">
+                    <div class="compose-header">
+                        <div class="user-avatar">D</div>
+                        <input type="text" placeholder="Share an update or article..." class="compose-input">
+                    </div>
+                    <div class="compose-actions">
+                        <button class="compose-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                            Image
+                        </button>
+                        <button class="compose-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                            Document
+                        </button>
+                        <button class="btn-primary">Post</button>
+                    </div>
                 </div>
 
                 <div class="feed-card">
-                    <div class="feed-header">
-                        <div class="header-left">
-                            <div class="company-logo webstep-logo">W</div>
-                            <div class="company-info">
-                                <div class="company-name">Webstep</div>
+                    <div class="card-header">
+                        <div class="publisher-info">
+                            <div class="company-avatar" style="background-color: #2e7d32;">W</div>
+                            <div>
+                                <div class="publisher-name">Webstep</div>
                                 <div class="post-time">36 minutes ago</div>
                             </div>
                         </div>
-                        <div class="share-options">
-                            <span>🔗</span>
-                            <span>⋯</span>
+                        <div class="card-actions">
+                            <button class="action-icon-btn" title="Save post">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                            <button class="action-icon-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="feed-content">
-                        <div class="feed-title">🚀 Nytt prosjekt i gang!</div>
-                        <p>Vi er stolte av å samarbeide med en offentlig aktør for å utvikle en ny plattform for saksbehandling. Fokus: Bruker-vennlighet, sikkerhet og skattebarheit. Vi gleder oss til å dele mer etter hvert!</p>
+                    <div class="card-content">
+                        <h3 class="post-title">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                            Nytt prosjekt i gang!
+                        </h3>
+                        <p class="post-text">Vi er stolte av å samarbeide med en offentlig aktør for å utvikle en ny plattform for saksbehandling. Fokus: Bruker-vennlighet, sikkerhet og skalerbarhet. Vi gleder oss til å dele mer etter hvert!</p>
                     </div>
-                    <div class="feed-actions">
-                        <button class="action-btn">❤️ Like</button>
-                        <button class="action-btn">💬 Comment</button>
-                        <div style="margin-left: auto;">
-                            <button class="action-btn">📤 Share</button>
+                    <div class="engagement-info">
+                        <div class="reactions">
+                            <span class="reaction-icon">❤️</span>
+                            <span>24 reactions</span>
                         </div>
+                        <span class="comment-count">8 comments</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            Like
+                        </button>
+                        <button class="action-btn comment-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                            Comment
+                        </button>
+                        <button class="action-btn share-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                            Share
+                        </button>
                     </div>
                 </div>
 
                 <div class="feed-card">
-                    <div class="feed-header">
-                        <div class="header-left">
-                            <div class="company-logo egde-logo">E</div>
-                            <div class="company-info">
-                                <div class="company-name">Egde</div>
+                    <div class="card-header">
+                        <div class="publisher-info">
+                            <div class="company-avatar" style="background-color: #1565c0;">E</div>
+                            <div>
+                                <div class="publisher-name">Egde</div>
                                 <div class="post-time">2 hours ago</div>
                             </div>
                         </div>
-                        <div class="share-options">
-                            <span>🔗</span>
-                            <span>⋯</span>
+                        <div class="card-actions">
+                            <button class="action-icon-btn" title="Save post">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                            <button class="action-icon-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="feed-content">
-                        <div class="feed-title">💡 Innovasjon i praksis</div>
-                        <p>Vi har akkurat levert en prototype for sanntidsdataanalyse til energisektoren. Innsikt og bærekraft går hånd i hånd – og dette er bare starten.</p>
+                    <div class="card-content">
+                        <h3 class="post-title">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                            Innovasjon i praksis
+                        </h3>
+                        <p class="post-text">Vi har akkurat levert en prototype for sanntidsdataanalyse til energisektoren. Innsikt og bærekraft går hånd i hånd – og dette er bare starten.</p>
+                        <img src="/images/data-analysis-dashboard.jpg" alt="Data analysis dashboard" class="post-image">
                     </div>
-                    <div class="feed-actions">
-                        <button class="action-btn">❤️ Like</button>
-                        <button class="action-btn">💬 Comment</button>
-                        <div style="margin-left: auto;">
-                            <button class="action-btn">📤 Share</button>
+                    <div class="engagement-info">
+                        <div class="reactions">
+                            <span class="reaction-icon">❤️</span>
+                            <span>42 reactions</span>
                         </div>
+                        <span class="comment-count">15 comments</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            Like
+                        </button>
+                        <button class="action-btn comment-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                            Comment
+                        </button>
+                        <button class="action-btn share-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                            Share
+                        </button>
                     </div>
                 </div>
 
                 <div class="feed-card">
-                    <div class="feed-header">
-                        <div class="header-left">
-                            <div class="company-logo crayon-logo">C</div>
-                            <div class="company-info">
-                                <div class="company-name">Crayon</div>
+                    <div class="card-header">
+                        <div class="publisher-info">
+                            <div class="company-avatar company-avatar-crayon">C</div>
+                            <div>
+                                <div class="publisher-name">Crayon</div>
                                 <div class="post-time">7 hours ago</div>
                             </div>
                         </div>
-                        <div class="share-options">
-                            <span>🔗</span>
-                            <span>⋯</span>
+                        <div class="card-actions">
+                            <button class="action-icon-btn" title="Save post">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </button>
+                            <button class="action-icon-btn" title="More options">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    <div class="feed-content">
-                        <div class="feed-title">☁️ Cloud-migrering for fremtiden!</div>
-                        <p>Et nytt migreringsprosjekt er sparket i gang! Vi hjelper en stor kunde over til Azure, med mål om økt effektivitet og kostnadskontroll.</p>
+                    <div class="card-content">
+                        <h3 class="post-title">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"></path>
+                            </svg>
+                            Cloud-migrering for fremtiden!
+                        </h3>
+                        <p class="post-text">Et nytt migreringsprosjekt er sparket i gang! Vi hjelper en stor kunde over til Azure, med mål om økt effektivitet og kostnadskontroll.</p>
                     </div>
-                    <div class="feed-actions">
-                        <button class="action-btn">❤️ Like</button>
-                        <button class="action-btn">💬 Comment</button>
-                        <div style="margin-left: auto;">
-                            <button class="action-btn">📤 Share</button>
+                    <div class="engagement-info">
+                        <div class="reactions">
+                            <span class="reaction-icon">❤️</span>
+                            <span>18 reactions</span>
                         </div>
+                        <span class="comment-count">5 comments</span>
+                    </div>
+                    <div class="card-actions">
+                        <button class="action-btn like-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            Like
+                        </button>
+                        <button class="action-btn comment-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                            Comment
+                        </button>
+                        <button class="action-btn share-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                            Share
+                        </button>
                     </div>
                 </div>
-
-                <div class="feed-card">
-                    <div class="feed-header">
-                        <div class="header-left">
-                            <img src="/api/placeholder/40/40" alt="Per Pedersen" class="company-logo" style="border-radius: 50%;">
-                            <div class="company-info">
-                                <div class="company-name">Per Pedersen</div>
-                                <div class="post-time">11 hours ago</div>
-                            </div>
-                        </div>
-                        <div class="share-options">
-                            <span>🔗</span>
-                            <span>⋯</span>
-                        </div>
-                    </div>
-                    <div class="feed-content">
-                        <div class="feed-title">👏 Stort konsulent prosjekt!</div>
-                        <p>Bli med på en spennende reise der du får kombinere teknologi og samfunnsnytte. Vi søker etter dyktige utviklere med kompetanse innen cloud og AI som ønsker å bidra til et prosjekt som kan transformere hvordan vi tenker om digital infrastruktur.</p>
-                    </div>
-                    <div class="feed-actions">
-                        <button class="action-btn">❤️ Like</button>
-                        <button class="action-btn">💬 Comment</button>
-                        <div style="margin-left: auto;">
-                            <button class="action-btn">📤 Share</button>
-                        </div>
-                    </div>
-                </div>
+                
+                <button class="load-more-btn">
+                    Load more updates
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <polyline points="19 12 12 19 5 12"></polyline>
+                    </svg>
+                </button>
             </div>
 
-            <!-- Right Column - Recent Projects -->
+            <!-- Right Column - Projects & Events -->
             <div class="right-column">
-                <h2 class="column-title">Recent Projects</h2>
-                <div class="project-card">
-                    <div class="company-logo egde-logo">E</div>
-                    <div class="contact-info">
-                        <div class="project-name">Data Analysis Platform</div>
-                        <div class="project-role">Role: IT Consultant</div>
-                        <div class="project-company">Egde</div>
-                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
+                <div class="section-header">
+                    <h2 class="section-title">My Projects</h2>
+                    <a href="projects.html" class="view-all-link">
+                        View all
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="projects-list">
+                    <div class="project-card-mini">
+                        <div class="project-logo" style="background-color: #1565c0;">E</div>
+                        <div class="project-details">
+                            <h3 class="project-name">Data Analysis Platform</h3>
+                            <p class="project-meta">
+                                <span class="project-role">IT Consultant</span>
+                                <span class="project-company">Egde</span>
+                            </p>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-text">75%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-mini">
+                        <div class="project-logo company-logo-crayon">C</div>
+                        <div class="project-details">
+                            <h3 class="project-name">AI Research Sustainability</h3>
+                            <p class="project-meta">
+                                <span class="project-role">Senior Developer</span>
+                                <span class="project-company">Crayon</span>
+                            </p>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 45%"></div>
+                                </div>
+                                <span class="progress-text">45%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-mini">
+                        <div class="project-logo" style="background-color: #2e7d32;">W</div>
+                        <div class="project-details">
+                            <h3 class="project-name">Server To Cloud Migration</h3>
+                            <p class="project-meta">
+                                <span class="project-role">Cloud Expert</span>
+                                <span class="project-company">Webstep</span>
+                            </p>
+                            <div class="project-progress">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 30%"></div>
+                                </div>
+                                <span class="progress-text">30%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="company-logo crayon-logo">C</div>
-                    <div class="contact-info">
-                        <div class="project-name">AI Research Sustainability</div>
-                        <div class="project-role">Role: Senior Developer</div>
-                        <div class="project-company">Crayon</div>
-                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
+
+                <div class="section-header mt-30">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <a href="#" class="view-all-link">
+                        View all
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="events-list">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <div class="event-month">May</div>
+                            <div class="event-day">15</div>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-name">Cloud Security Workshop</h3>
+                            <div class="event-organizer">Organized by Crayon</div>
+                            <div class="event-location">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Online (Teams)</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline btn-sm">RSVP</button>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-date">
+                            <div class="event-month">Jun</div>
+                            <div class="event-day">02</div>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-name">DiginConnect Meetup</h3>
+                            <div class="event-organizer">Organized by Digin</div>
+                            <div class="event-location">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>Kristiansand</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline btn-sm">RSVP</button>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="company-logo webstep-logo">W</div>
-                    <div class="contact-info">
-                        <div class="project-name">Server To Cloud Migration</div>
-                        <div class="project-role">Role: Cloud Expert</div>
-                        <div class="project-company">Webstep</div>
-                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
-                    </div>
+
+                <div class="section-header mt-30">
+                    <h2 class="section-title">Industry News</h2>
                 </div>
-                <div class="project-card">
-                    <div class="company-logo crayon-logo">C</div>
-                    <div class="contact-info">
-                        <div class="project-name">UX/UI Redesign</div>
-                        <div class="project-role">Role: Senior Developer</div>
-                        <div class="project-company">Crayon</div>
-                        <a href="projectsDetail.html" class="btn view-btn">View Details</a>
-                    </div>
+                
+                <div class="news-list">
+                    <a href="#" class="news-item">
+                        <span class="news-title">New regulations for AI in the EU</span>
+                        <span class="news-source">Tech Weekly</span>
+                    </a>
+                    <a href="#" class="news-item">
+                        <span class="news-title">Norway invests in green tech startups</span>
+                        <span class="news-source">Innovation Norway</span>
+                    </a>
+                    <a href="#" class="news-item">
+                        <span class="news-title">Cloud spending reaches new heights</span>
+                        <span class="news-source">Cloud Insights</span>
+                    </a>
                 </div>
             </div>
         </div>

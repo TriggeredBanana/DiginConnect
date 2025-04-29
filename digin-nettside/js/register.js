@@ -28,9 +28,21 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     window.location.href = 'login.html'; // Changed from index.html to login.html
 });
 
-// Toggle password visibility
+// Toggle password visibility for confirm password
 document.querySelector('.toggle-password').addEventListener('click', function() {
     const passwordField = document.getElementById('confirmPassword');
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        this.textContent = '👁️';
+    } else {
+        passwordField.type = 'password';
+        this.textContent = '👁️';
+    }
+});
+
+// Toggle password visibility for main password
+document.querySelector('.toggle-password-main').addEventListener('click', function() {
+    const passwordField = document.getElementById('password');
     if (passwordField.type === 'password') {
         passwordField.type = 'text';
         this.textContent = '👁️';

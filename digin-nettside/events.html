@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiginConnect - Events</title>
+    <link rel="stylesheet" href="css/events.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="\images\DiginConnectLogo.png" alt="Digin Connect">
+            </div>
+            <div class="nav-menu">
+                <a href="feed.html" class="nav-item">Activity Feed</a>
+                <a href="events.html" class="nav-item active">Events</a>
+                <a href="messages.html" class="nav-item">Messages</a>
+                <a href="projects.html" class="nav-item">Projects</a>
+                <a href="companies.html" class="nav-item">Companies</a>
+            </div>
+            <div class="user-profile">
+                <span>Daniel</span>
+                <div class="avatar">D</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Left Column - Filters & Calendar -->
+            <div class="left-column">
+                <div class="section-header">
+                    <h2 class="section-title">Event Calendar</h2>
+                </div>
+
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav-btn" id="prev-month">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <span class="current-month" id="current-month-display">May 2025</span>
+                        <button class="calendar-nav-btn" id="next-month">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div class="calendar-weekdays">
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                        <div>Sun</div>
+                    </div>
+                    
+                    <div class="calendar-days" id="calendar-days">
+                        <!-- Calendar days will be populated by JS -->
+                    </div>
+                </div>
+
+                <div class="section-header mt-30">
+                    <h2 class="section-title">Filters</h2>
+                </div>
+
+                <div class="filter-section">
+                    <div class="search-container">
+                        <div class="search-bar">
+                            <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                            <input type="text" placeholder="Search events..." id="search-input">
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3 class="filter-title">Event Type</h3>
+                        <div class="filter-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="workshop" checked> Workshop
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="conference" checked> Conference
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="networking" checked> Networking
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="training" checked> Training
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="other" checked> Other
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3 class="filter-title">Location</h3>
+                        <div class="filter-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="inperson" checked> In-person
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="online" checked> Online
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="hybrid" checked> Hybrid
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3 class="filter-title">Companies</h3>
+                        <div class="filter-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="crayon" checked> Crayon
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="egde" checked> Egde
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="webstep" checked> Webstep
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="digin" checked> Digin
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" value="other" checked> Other
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn-primary filter-apply-btn">Apply Filters</button>
+                    <button class="btn-text filter-reset-btn">Reset</button>
+                </div>
+            </div>
+
+            <!-- Middle Column - Events List -->
+            <div class="middle-column">
+                <div class="section-header">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <div class="view-options">
+                        <button class="view-option-btn active" data-view="list">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="8" y1="6" x2="21" y2="6"></line>
+                                <line x1="8" y1="12" x2="21" y2="12"></line>
+                                <line x1="8" y1="18" x2="21" y2="18"></line>
+                                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                            </svg>
+                            List
+                        </button>
+                        <button class="view-option-btn" data-view="grid">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                            Grid
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="events-list" id="events-list">
+                    <!-- May events -->
+                    <div class="event-month-divider">May 2025</div>
+                    
+                    <div class="event-card" data-type="workshop" data-location="online" data-company="crayon">
+                        <div class="event-date">
+                            <div class="event-month">May</div>
+                            <div class="event-day">15</div>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-name">Cloud Security Workshop</h3>
+                            <div class="event-organizer">Organized by Crayon</div>
+                            <div class="event-info">
+                                <div class="event-time">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>10:00 - 12:30</span>
+                                </div>
+                                <div class="event-location">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span>Online (Teams)</span>
+                                </div>
+                                <div class="event-type" data-type="workshop">Workshop</div>
+                            </div>
+                            <p class="event-description">Learn about the latest cloud security best practices and how to safeguard your infrastructure from emerging threats. This hands-on workshop will cover Azure and AWS security features.</p>
+                            <div class="event-actions">
+                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-text event-share-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="18" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="12" r="3"></circle>
+                                        <circle cx="18" cy="19" r="3"></circle>
+                                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                    </svg>
+                                    Share
+                                </button>
+                                <button class="btn-text event-reminder-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                    Remind me
+                                </button>
+                            </div>
+                        </div>
+                        <div class="event-attendees">
+                            <div class="attendee-count">18 people attending</div>
+                            <div class="attendee-avatars">
+                                <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
+                                <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
+                                <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
+                                <div class="attendee-avatar attendee-more">+15</div>
+                            </div>
+                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-type="networking" data-location="inperson" data-company="webstep">
+                        <div class="event-date">
+                            <div class="event-month">May</div>
+                            <div class="event-day">22</div>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-name">Tech Professionals Networking Evening</h3>
+                            <div class="event-organizer">Organized by Webstep</div>
+                            <div class="event-info">
+                                <div class="event-time">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>18:00 - 21:00</span>
+                                </div>
+                                <div class="event-location">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span>Webstep Kristiansand Office</span>
+                                </div>
+                                <div class="event-type" data-type="networking">Networking</div>
+                            </div>
+                            <p class="event-description">Join us for an evening of networking, light refreshments, and interesting discussions about technology trends and opportunities. Meet tech professionals from various industries and expand your network.</p>
+                            <div class="event-actions">
+                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-text event-share-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="18" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="12" r="3"></circle>
+                                        <circle cx="18" cy="19" r="3"></circle>
+                                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                    </svg>
+                                    Share
+                                </button>
+                                <button class="btn-text event-reminder-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                    Remind me
+                                </button>
+                            </div>
+                        </div>
+                        <div class="event-attendees">
+                            <div class="attendee-count">32 people attending</div>
+                            <div class="attendee-avatars">
+                                <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
+                                <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
+                                <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
+                                <div class="attendee-avatar attendee-more">+29</div>
+                            </div>
+                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                        </div>
+                    </div>
+
+                    <!-- June events -->
+                    <div class="event-month-divider">June 2025</div>
+                    
+                    <div class="event-card" data-type="conference" data-location="inperson" data-company="digin">
+                        <div class="event-date">
+                            <div class="event-month">Jun</div>
+                            <div class="event-day">02</div>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-name">DiginConnect Annual Conference</h3>
+                            <div class="event-organizer">Organized by Digin</div>
+                            <div class="event-info">
+                                <div class="event-time">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>09:00 - 17:00</span>
+                                </div>
+                                <div class="event-location">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span>Scandic Bystranda, Kristiansand</span>
+                                </div>
+                                <div class="event-type" data-type="conference">Conference</div>
+                            </div>
+                            <p class="event-description">Join us for the annual DiginConnect conference featuring keynote speakers, panel discussions, and networking opportunities. This year's theme is "Digital Innovation in Practice" with a focus on real-world implementation challenges and solutions.</p>
+                            <div class="event-actions">
+                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-text event-share-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="18" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="12" r="3"></circle>
+                                        <circle cx="18" cy="19" r="3"></circle>
+                                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                    </svg>
+                                    Share
+                                </button>
+                                <button class="btn-text event-reminder-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                    Remind me
+                                </button>
+                            </div>
+                        </div>
+                        <div class="event-attendees">
+                            <div class="attendee-count">75 people attending</div>
+                            <div class="attendee-avatars">
+                                <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
+                                <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
+                                <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
+                                <div class="attendee-avatar attendee-more">+72</div>
+                            </div>
+                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                        </div>
+                    </div>
+
+                    <div class="event-card" data-type="training" data-location="hybrid" data-company="egde">
+                        <div class="event-date">
+                            <div class="event-month">Jun</div>
+                            <div class="event-day">14</div>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-name">Azure DevOps Masterclass</h3>
+                            <div class="event-organizer">Organized by Egde</div>
+                            <div class="event-info">
+                                <div class="event-time">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>13:00 - 16:00</span>
+                                </div>
+                                <div class="event-location">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span>Egde Office, Kristiansand (Hybrid)</span>
+                                </div>
+                                <div class="event-type" data-type="training">Training</div>
+                            </div>
+                            <p class="event-description">A comprehensive training session on Azure DevOps, covering CI/CD pipelines, automated testing, and infrastructure as code. Suitable for developers, DevOps engineers, and IT professionals looking to enhance their cloud skills.</p>
+                            <div class="event-actions">
+                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-text event-share-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="18" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="12" r="3"></circle>
+                                        <circle cx="18" cy="19" r="3"></circle>
+                                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                    </svg>
+                                    Share
+                                </button>
+                                <button class="btn-text event-reminder-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                    Remind me
+                                </button>
+                            </div>
+                        </div>
+                        <div class="event-attendees">
+                            <div class="attendee-count">24 people attending</div>
+                            <div class="attendee-avatars">
+                                <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
+                                <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
+                                <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
+                                <div class="attendee-avatar attendee-more">+21</div>
+                            </div>
+                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                        </div>
+                    </div>
+
+                    <!-- July events -->
+                    <div class="event-month-divider">July 2025</div>
+                    
+                    <div class="event-card" data-type="other" data-location="inperson" data-company="other">
+                        <div class="event-date">
+                            <div class="event-month">Jul</div>
+                            <div class="event-day">05</div>
+                        </div>
+                        <div class="event-details">
+                            <h3 class="event-name">Tech Industry Summer Gathering</h3>
+                            <div class="event-organizer">Organized by Local Tech Hub</div>
+                            <div class="event-info">
+                                <div class="event-time">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                    <span>16:00 - 21:00</span>
+                                </div>
+                                <div class="event-location">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                    <span>Bystranda Beach, Kristiansand</span>
+                                </div>
+                                <div class="event-type" data-type="other">Social</div>
+                            </div>
+                            <p class="event-description">An informal summer gathering for tech professionals in the region. Food, drinks, and activities provided. Bring your family and enjoy a relaxed afternoon with colleagues from the industry. Perfect opportunity to build connections in an informal setting.</p>
+                            <div class="event-actions">
+                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-text event-share-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="18" cy="5" r="3"></circle>
+                                        <circle cx="6" cy="12" r="3"></circle>
+                                        <circle cx="18" cy="19" r="3"></circle>
+                                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                    </svg>
+                                    Share
+                                </button>
+                                <button class="btn-text event-reminder-btn">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                    Remind me
+                                </button>
+                            </div>
+                        </div>
+                        <div class="event-attendees">
+                            <div class="attendee-count">48 people attending</div>
+                            <div class="attendee-avatars">
+                                <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
+                                <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
+                                <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
+                                <div class="attendee-avatar attendee-more">+45</div>
+                            </div>
+                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-text load-more-btn" id="load-more-btn">
+                    Load more events
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                
+                <!-- Empty state message (hidden by default) -->
+                <div class="empty-state" id="no-events-message" style="display: none;">
+                    <svg class="empty-state-icon" viewBox="0 0 24 24" width="80" height="80" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <h3>No events found</h3>
+                    <p>Try adjusting your filters or search criteria to find events that match your interests.</p>
+                    <button class="btn-primary" id="reset-filters-btn">Reset Filters</button>
+                </div>
+            </div>
+
+            <!-- Right Column - My Events & Suggestions -->
+            <div class="right-column">
+                <div class="section-header">
+                    <h2 class="section-title">Create an Event</h2>
+                </div>
+            
+                <div class="create-event-card">
+                    <p>Organize your own event and invite your network</p>
+                    <button class="btn-primary btn-sm create-event-btn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                        Create Event
+                    </button>
+                </div>
+            
+                <div class="section-header mt-30">
+                    <h2 class="section-title">My Events</h2>
+                    <button class="btn-text view-all-link">
+                        Manage
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 6 15 12 9 18"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="my-events-list">
+                    <div class="my-event-card attending">
+                        <div class="rec-event-date">
+                            <div class="event-month">May</div>
+                            <div class="event-day">15</div>
+                        </div>
+                        <div class="my-event-details">
+                            <h3 class="my-event-name">Cloud Security Workshop</h3>
+                            <div class="my-event-info">
+                                <span class="event-time-mini">10:00 - 12:30</span>
+                                <span class="attendance-status">Attending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-event-card attending">
+                        <div class="rec-event-date">
+                            <div class="event-month">Jun</div>
+                            <div class="event-day">02</div>
+                        </div>
+                        <div class="my-event-details">
+                            <h3 class="my-event-name">DiginConnect Annual Conference</h3>
+                            <div class="my-event-info">
+                                <span class="event-time-mini">09:00 - 17:00</span>
+                                <span class="attendance-status">Attending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="my-event-card pending">
+                        <div class="rec-event-date">
+                            <div class="event-month">Jun</div>
+                            <div class="event-day">14</div>
+                        </div>
+                        <div class="my-event-details">
+                            <h3 class="my-event-name">Azure DevOps Masterclass</h3>
+                            <div class="my-event-info">
+                                <span class="event-time-mini">13:00 - 16:00</span>
+                                <span class="attendance-status">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-header mt-30">
+                    <h2 class="section-title">Recommended Events</h2>
+                </div>
+                
+                <div class="recommended-events">
+                    <div class="recommended-event">
+                        <div class="rec-event-header">
+                            <div class="rec-event-date">
+                                <div class="event-month">Jul</div>
+                                <div class="event-day">18</div>
+                            </div>
+                            <div class="rec-event-type" data-type="networking">Networking</div>
+                        </div>
+                        <h3 class="rec-event-name">Tech Startup Meetup</h3>
+                        <div class="rec-event-info">
+                            <div class="rec-event-organizer">By Innovasjon Norge</div>
+                            <div class="rec-event-location">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Oslo
+                            </div>
+                        </div>
+                        <button class="btn-outline btn-sm btn-block">RSVP</button>
+                    </div>
+
+                    <div class="recommended-event">
+                        <div class="rec-event-header">
+                            <div class="rec-event-date">
+                                <div class="event-month">Aug</div>
+                                <div class="event-day">05</div>
+                            </div>
+                            <div class="rec-event-type" data-type="training">Training</div>
+                        </div>
+                        <h3 class="rec-event-name">AWS Certification Prep</h3>
+                        <div class="rec-event-info">
+                            <div class="rec-event-organizer">By Crayon</div>
+                            <div class="rec-event-location">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Online
+                            </div>
+                        </div>
+                        <button class="btn-outline btn-sm btn-block">RSVP</button>
+                    </div>
+
+                    <div class="recommended-event">
+                        <div class="rec-event-header">
+                            <div class="rec-event-date">
+                                <div class="event-month">Aug</div>
+                                <div class="event-day">22</div>
+                            </div>
+                            <div class="rec-event-type" data-type="conference">Conference</div>
+                        </div>
+                        <h3 class="rec-event-name">Future of Work Summit</h3>
+                        <div class="rec-event-info">
+                            <div class="rec-event-organizer">By Microsoft Norway</div>
+                            <div class="rec-event-location">
+                                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Stavanger
+                            </div>
+                        </div>
+                        <button class="btn-outline btn-sm btn-block">RSVP</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/events.js"></script>
+</body>
+</html>

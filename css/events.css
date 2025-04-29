@@ -715,6 +715,7 @@ header {
     flex-direction: column;
     padding: 0;
     overflow: hidden;
+    position: relative;
 }
 
 .events-list.grid-view .event-date {

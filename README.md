@@ -5,6 +5,8 @@
 
 # Oversikt
 DiginConnect er en plattform for samhandling og innovasjon utviklet for Digin. Plattformen samler fagfolk, prosjekter, bedrifter og arrangementer i ett digitalt økosystem. Her kan du bygge nettverk, oppdage nye samarbeidsmuligheter, presentere bedriften din og holde oversikt over relevante arrangementer – alt i en brukervennlig webapplikasjon.
+
+Her kan du teste en live demo: https://diginconnect.netlify.app
 <br></br>
 # Viktige funksjoner
 

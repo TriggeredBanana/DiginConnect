@@ -142,10 +142,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     const buttonText = this.textContent.trim();
                     if (buttonText.includes('Filter')) {
                         // Show filter dialog (in a real app)
-                        alert('Filter options would appear here');
+                        alert('Filteralternativer vil vises her');
                     } else if (buttonText.includes('Sort')) {
                         // Show sort options (in a real app)
-                        alert('Sort options would appear here');
+                        alert('Sorteringsalternativer vil vises her');
                     }
                 });
             });
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     this.classList.add('active');
                     
                     // In a real app, this would load the appropriate page
-                    alert(`Loading page ${this.textContent}`);
+                    alert(`Laster side ${this.textContent}`);
                 });
             });
         }
@@ -218,6 +218,6 @@ document.addEventListener('DOMContentLoaded', function() {
         filterProjects('all');
         
     } catch (error) {
-        console.error('Error in projects.js:', error);
+        console.error('Feil i projects.js:', error);
     }
 });

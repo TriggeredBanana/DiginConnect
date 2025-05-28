@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 paginationBtns.forEach(b => b.classList.remove('active'));
                 this.classList.add('active');
                 
-                alert(`Loading page ${this.textContent}`);
+                alert(`Laster side ${this.textContent}`);
             });
         });
         
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.company-logo img').forEach(img => {
             // Set a single error handler instead of inline onerror attributes
             img.onerror = function() {
-                const companyName = this.closest('.company-card')?.querySelector('.company-name')?.textContent || 'Company';
+                const companyName = this.closest('.company-card')?.querySelector('.company-name')?.textContent || 'Bedrift';
                 this.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="60" style="background:%23f8f9fa"><text x="50%" y="50%" font-family="Arial" font-size="16" fill="%23666" text-anchor="middle" dominant-baseline="middle">' + companyName + '</text></svg>';
                 // Remove the error handler to prevent potential loops
                 this.onerror = null;
@@ -140,6 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
     } catch (error) {
-        console.error('Error in companies.js:', error);
+        console.error('Feil i companies.js:', error);
     }
 });

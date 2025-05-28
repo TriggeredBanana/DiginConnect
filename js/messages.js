@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         visibleCount++;
                     }
                 });
-                messagesCount.textContent = `${visibleCount} message${visibleCount !== 1 ? 's' : ''}`;
+                messagesCount.textContent = `${visibleCount} melding${visibleCount !== 1 ? 'er' : ''}`;
             }
         }
 
@@ -126,14 +126,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Check if matches the current tab filter
                 let matchesTab = true;
-                if (currentTab !== 'all messages') {
-                    if (currentTab === 'companies') {
+                if (currentTab !== 'all messages' && currentTab !== 'alle meldinger') {
+                    if (currentTab === 'companies' || currentTab === 'bedrifter') {
                         matchesTab = sender.includes('egde') || sender.includes('webstep') || 
                                     sender.includes('crayon') || sender.includes('digin');
-                    } else if (currentTab === 'users') {
+                    } else if (currentTab === 'users' || currentTab === 'brukere') {
                         matchesTab = !sender.includes('egde') && !sender.includes('webstep') && 
                                     !sender.includes('crayon') && !sender.includes('digin');
-                    } else if (currentTab === 'projects') {
+                    } else if (currentTab === 'projects' || currentTab === 'prosjekter') {
                         matchesTab = subject.includes('prosjekt') || content.includes('prosjekt') || 
                                     subject.includes('project') || content.includes('project');
                     }
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset to all messages tab
                 tabs.forEach(tab => {
                     tab.classList.remove('active');
-                    if (tab.textContent.toLowerCase() === 'all messages') {
+                    if (tab.textContent.toLowerCase() === 'all messages' || tab.textContent.toLowerCase() === 'alle meldinger') {
                         tab.classList.add('active');
                     }
                 });
@@ -230,17 +230,18 @@ document.addEventListener('DOMContentLoaded', function() {
             sortBtn.addEventListener('click', function() {
                 // Toggle sort order (in a real app, you'd have a dropdown menu)
                 const sortOptions = ['date', 'sender', 'subject'];
+                const sortOptionsNorwegian = ['dato', 'avsender', 'emne'];
                 const currentIndex = sortOptions.indexOf(currentSort);
                 const nextIndex = (currentIndex + 1) % sortOptions.length;
                 currentSort = sortOptions[nextIndex];
                 
-                // Update button text
+                // Update button text with Norwegian labels
                 this.innerHTML = `
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="7 11 12 6 17 11"></polyline>
                         <polyline points="7 17 12 12 17 17"></polyline>
                     </svg>
-                    Sort: ${currentSort.charAt(0).toUpperCase() + currentSort.slice(1)}
+                    Sorter: ${sortOptionsNorwegian[nextIndex]}
                     <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -248,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // In a real app, you would sort the messages here
                 // For this demo, just show an alert
-                alert(`Messages sorted by: ${currentSort}`);
+                alert(`Meldinger sortert etter: ${sortOptionsNorwegian[nextIndex]}`);
             });
         }
 
@@ -262,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 
                 // In a real app, you'd update a bulk actions menu here
-                console.log(`Selected messages: ${selectedMessages.size}`);
+                console.log(`Valgte meldinger: ${selectedMessages.size}`);
             });
         });
 
@@ -276,14 +277,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Update SVG appearance
                 if (this.classList.contains('starred')) {
-                    this.setAttribute('title', 'Remove from starred');
+                    this.setAttribute('title', 'Fjern fra favoritter');
                     this.innerHTML = `
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none">
                             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                         </svg>
                     `;
                 } else {
-                    this.setAttribute('title', 'Mark as starred');
+                    this.setAttribute('title', 'Marker som favoritt');
                     this.innerHTML = `
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
@@ -309,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const sender = messageItem.querySelector('.sender-name').textContent;
                 const subject = messageItem.querySelector('.message-subject').textContent;
                 
-                alert(`Options for message "${subject}" from ${sender}`);
+                alert(`Alternativer for melding "${subject}" fra ${sender}`);
             });
         });
 
@@ -327,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const subject = this.querySelector('.message-subject').textContent;
                 
                 // In a real app, this would navigate to a message detail view
-                alert(`Opening message from ${sender}: "${subject}"`);
+                alert(`Åpner melding fra ${sender}: "${subject}"`);
                 
                 // Mark as read by removing unread class
                 this.classList.remove('unread');
@@ -343,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // In a real app, this would reload messages from server
                 setTimeout(() => {
                     this.classList.remove('spinning');
-                    alert('Messages refreshed');
+                    alert('Meldinger oppdatert');
                 }, 1000);
             });
         }
@@ -352,7 +353,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (headerMoreBtn) {
             headerMoreBtn.addEventListener('click', function() {
                 // In a real app, this would show a dropdown menu
-                alert('More options menu');
+                alert('Flere alternativer-meny');
             });
         }
 
@@ -360,7 +361,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (composeBtn) {
             composeBtn.addEventListener('click', function() {
                 // In a real app, this would open a compose dialog or navigate to a compose page
-                alert('New message composer would open here');
+                alert('Ny melding-skjema vil åpnes her');
             });
         }
 
@@ -375,6 +376,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateHeaderInfo();
         
     } catch (error) {
-        console.error('Error in messages.js:', error);
+        console.error('Feil i messages.js:', error);
     }
 });

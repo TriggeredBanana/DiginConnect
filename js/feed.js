@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                             </svg>
-                            Like
+                            Liker
                         `;
                     } else {
                         this.classList.add('liked');
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                             </svg>
-                            Liked
+                            Likt
                         `;
                     }
                     
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const reactionsElement = feedCard.querySelector('.reactions span:last-child');
                     const currentCount = parseInt(reactionsElement.textContent);
                     const newCount = isLiked ? currentCount - 1 : currentCount + 1;
-                    reactionsElement.textContent = newCount + ' reactions';
+                    reactionsElement.textContent = newCount + ' reaksjoner';
                 });
             });
         }
@@ -70,14 +70,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     const publisherName = feedCard.querySelector('.publisher-name').textContent;
                     
                     // Show comment input (in a real app, this would open a comment area)
-                    const commentText = prompt(`Add a comment to ${publisherName}'s post:`);
+                    const commentText = prompt(`Legg til en kommentar på ${publisherName}s innlegg:`);
                     if (commentText && commentText.trim() !== '') {
-                        alert(`Comment added: "${commentText}"`);
+                        alert(`Kommentar lagt til: "${commentText}"`);
                         
                         // Update comment count (in a real app, this would be an API call)
                         const commentCountElement = feedCard.querySelector('.comment-count');
                         const currentCount = parseInt(commentCountElement.textContent);
-                        commentCountElement.textContent = (currentCount + 1) + ' comments';
+                        commentCountElement.textContent = (currentCount + 1) + ' kommentarer';
                     }
                 });
             });
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const publisherName = feedCard.querySelector('.publisher-name').textContent;
                     
                     // Simple share functionality (would be more sophisticated in a real app)
-                    alert(`You've shared ${publisherName}'s post with your network`);
+                    alert(`Du har delt ${publisherName}s innlegg med ditt nettverk`);
                 });
             });
         }
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                             </svg>
                         `;
-                        alert('Post removed from saved items');
+                        alert('Innlegg fjernet fra lagrede elementer');
                     } else {
                         this.classList.add('saved');
                         this.innerHTML = `
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                             </svg>
                         `;
-                        alert('Post saved to your profile');
+                        alert('Innlegg lagret til profilen din');
                     }
                 });
             });
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     const publisherName = feedCard.querySelector('.publisher-name').textContent;
                     
                     // Simple options menu (would be a dropdown in a real app)
-                    alert(`Options for ${publisherName}'s post:\n- Report post\n- Hide posts from ${publisherName}\n- Follow ${publisherName}`);
+                    alert(`Alternativer for ${publisherName}s innlegg:\n- Rapporter innlegg\n- Skjul innlegg fra ${publisherName}\n- Følg ${publisherName}`);
                 });
             });
         }
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (feedFilters) {
             feedFilters.addEventListener('click', function() {
                 // In a real app, this would open a filter modal or dropdown
-                alert('Filter options:\n- All updates\n- Company updates only\n- Project updates only\n- Connection updates only');
+                alert('Filteralternativer:\n- Alle oppdateringer\n- Kun bedriftsoppdateringer\n- Kun prosjektoppdateringer\n- Kun kontaktoppdateringer');
             });
         }
         
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Simulate a refresh (in a real app, this would fetch new content)
                 setTimeout(() => {
                     this.classList.remove('refreshing');
-                    alert('Feed refreshed with the latest updates');
+                    alert('Feed oppdatert med de siste oppdateringene');
                 }, 1000);
             });
         }
@@ -203,19 +203,19 @@ document.addEventListener('DOMContentLoaded', function() {
             loadMoreBtn.addEventListener('click', function() {
                 // Add a loading state
                 this.classList.add('loading');
-                this.textContent = 'Loading...';
+                this.textContent = 'Laster...';
                 
                 // Simulate loading more posts (in a real app, this would fetch more content)
                 setTimeout(() => {
                     this.classList.remove('loading');
                     this.innerHTML = `
-                        Load more updates
+                        Last inn flere oppdateringer
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="12" y1="5" x2="12" y2="19"></line>
                             <polyline points="19 12 12 19 5 12"></polyline>
                         </svg>
                     `;
-                    alert('No more updates to load');
+                    alert('Ingen flere oppdateringer å laste inn');
                 }, 1500);
             });
         }
@@ -227,12 +227,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const postText = composeInput.value.trim();
                 
                 if (postText === '') {
-                    alert('Please enter some content for your post');
+                    alert('Vennligst skriv noe innhold til innlegget ditt');
                     return;
                 }
                 
                 // In a real app, this would submit the post to an API
-                alert('Your post has been published!');
+                alert('Innlegget ditt er publisert!');
                 composeInput.value = '';
             });
         }
@@ -249,7 +249,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     // Show appropriate connections (in a real app, this would filter the connections)
                     const tabText = this.textContent.toLowerCase();
-                    alert(`Showing ${tabText} connections`);
+                    alert(`Viser ${tabText} kontakter`);
                 });
             });
         }
@@ -265,12 +265,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     if (isAttending) {
                         this.classList.remove('attending');
-                        this.textContent = 'RSVP';
-                        alert(`You are no longer attending "${eventName}"`);
+                        this.textContent = 'Delta';
+                        alert(`Du deltar ikke lenger på "${eventName}"`);
                     } else {
                         this.classList.add('attending');
-                        this.textContent = 'Attending';
-                        alert(`You are now attending "${eventName}"`);
+                        this.textContent = 'Deltar';
+                        alert(`Du deltar nå på "${eventName}"`);
                     }
                 });
             });
@@ -290,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (viewAllConnections) {
             viewAllConnections.addEventListener('click', function() {
                 // In a real app, this would navigate to a connections page
-                alert('Navigating to all connections');
+                alert('Navigerer til alle kontakter');
             });
         }
         
@@ -304,6 +304,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
     } catch (error) {
-        console.error('Error in feed.js:', error);
+        console.error('Feil i feed.js:', error);
     }
 });

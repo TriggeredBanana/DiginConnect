@@ -9,17 +9,17 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     
     // Basic validation
     if (!fullName || !email || !password || !confirmPassword) {
-        alert('Please fill in all required fields');
+                alert('Vennligst fyll ut alle feltene');
         return;
     }
     
     if (password !== confirmPassword) {
-        alert('Passwords do not match');
+        alert('Passordene samsvarer ikke');
         return;
     }
     
     if (!termsAgreement) {
-        alert('You must agree to the Terms of Service and Privacy Policy');
+        alert('Du må akseptere vilkårene for å registrere deg');
         return;
     }
     

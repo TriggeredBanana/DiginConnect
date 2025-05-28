@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', function() {
         function updateCalendar() {
             if (!currentMonthDisplay || !calendarDays) return;
             
-            const months = ['January', 'February', 'March', 'April', 'May', 'June', 
-                            'July', 'August', 'September', 'October', 'November', 'December'];
+            const months = ['Januar', 'Februar', 'Mars', 'April', 'Mai', 'Juni', 
+                            'Juli', 'August', 'September', 'Oktober', 'November', 'Desember'];
             
             // Update month/year display
             currentMonthDisplay.textContent = `${months[currentMonth]} ${currentYear}`;
@@ -113,8 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Add click event for days
                 dayElement.addEventListener('click', function() {
                     // In a real app, this would navigate to events for this date or show events in a popup
-                    const dateString = `${months[currentMonth]} ${i}, ${currentYear}`;
-                    alert(`Showing events for ${dateString}`);
+                    const dateString = `${i}. ${months[currentMonth]} ${currentYear}`;
+                    alert(`Viser arrangementer for ${dateString}`);
                 });
                 
                 calendarDays.appendChild(dayElement);
@@ -158,11 +158,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const filterTitle = filterGroup.querySelector('.filter-title').textContent.toLowerCase();
                 
-                if (filterTitle === 'event type') {
+                if (filterTitle === 'event type' || filterTitle === 'arrangementtype') {
                     selectedTypes.push(checkbox.value);
-                } else if (filterTitle === 'location') {
+                } else if (filterTitle === 'location' || filterTitle === 'sted') {
                     selectedLocations.push(checkbox.value);
-                } else if (filterTitle === 'companies') {
+                } else if (filterTitle === 'companies' || filterTitle === 'bedrifter') {
                     selectedCompanies.push(checkbox.value);
                 }
             });
@@ -271,18 +271,18 @@ document.addEventListener('DOMContentLoaded', function() {
             loadMoreBtn.addEventListener('click', function() {
                 // In a real app, this would load more events from the server
                 this.classList.add('loading');
-                this.innerHTML = 'Loading...';
+                this.innerHTML = 'Laster...';
                 
                 // Simulate loading delay
                 setTimeout(() => {
                     this.classList.remove('loading');
                     this.innerHTML = `
-                        Load more events
+                        Last inn flere arrangementer
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                     `;
-                    alert('No more events to load');
+                    alert('Ingen flere arrangementer å laste inn');
                 }, 1000);
             });
         }
@@ -296,12 +296,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Toggle RSVP status
                 if (this.classList.contains('attending')) {
                     this.classList.remove('attending');
-                    this.textContent = 'RSVP';
-                    alert(`You are no longer attending "${eventName}"`);
+                    this.textContent = 'Delta';
+                    alert(`Du deltar ikke lenger på "${eventName}"`);
                 } else {
                     this.classList.add('attending');
-                    this.textContent = 'Attending';
-                    alert(`You are now attending "${eventName}". This event has been added to your calendar.`);
+                    this.textContent = 'Deltar';
+                    alert(`Du deltar nå på "${eventName}". Dette arrangementet er lagt til i kalenderen din.`);
                     
                     // In a real app, we would update the attendee count and avatars
                 }
@@ -315,7 +315,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const eventName = eventCard.querySelector('.event-name').textContent;
                 
                 // In a real app, this would open a share dialog
-                alert(`Sharing options for "${eventName}"\n- Copy link\n- Email\n- Share to LinkedIn\n- Share to Twitter`);
+                alert(`Delingsalternativer for "${eventName}"\n- Kopier lenke\n- E-post\n- Del på LinkedIn\n- Del på Twitter`);
             });
         });
         
@@ -328,10 +328,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Toggle reminder status
                 if (this.classList.contains('active')) {
                     this.classList.remove('active');
-                    alert(`Reminder removed for "${eventName}"`);
+                    alert(`Påminnelse fjernet for "${eventName}"`);
                 } else {
                     this.classList.add('active');
-                    alert(`You will be reminded about "${eventName}" one day before the event`);
+                    alert(`Du vil bli påminnet om "${eventName}" én dag før arrangementet`);
                 }
             });
         });
@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (createEventBtn) {
             createEventBtn.addEventListener('click', function() {
                 // In a real app, this would navigate to an event creation form or open a modal
-                alert('Event creation form would open here');
+                alert('Skjema for å lage arrangement vil åpnes her');
             });
         }
         
@@ -353,12 +353,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Toggle RSVP status
                 if (this.classList.contains('attending')) {
                     this.classList.remove('attending');
-                    this.textContent = 'RSVP';
-                    alert(`You are no longer attending "${eventName}"`);
+                    this.textContent = 'Delta';
+                    alert(`Du deltar ikke lenger på "${eventName}"`);
                 } else {
                     this.classList.add('attending');
-                    this.textContent = 'Attending';
-                    alert(`You are now attending "${eventName}". This event has been added to your calendar.`);
+                    this.textContent = 'Deltar';
+                    alert(`Du deltar nå på "${eventName}". Dette arrangementet er lagt til i kalenderen din.`);
                 }
             });
         });
@@ -370,6 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
         filterEvents();
         
     } catch (error) {
-        console.error('Error in events.js:', error);
+        console.error('Feil i events.js:', error);
     }
 });

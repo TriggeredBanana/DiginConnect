@@ -1,13 +1,13 @@
 // JavaScript for the profile page
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Profile page loaded");
+    console.log("Profilside lastet");
 
     // Profile page interactions
     const editProfileLink = document.querySelector('.edit-profile-link');
     if (editProfileLink) {
         editProfileLink.addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Edit profile feature is coming soon!');
+            alert('Redigeringsfunksjon for profil kommer snart!');
         });
     }
 

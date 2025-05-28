@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // In a real app, you would show/hide sections based on the target ID
             // For this demo, show an alert
-            alert(`Navigating to ${this.textContent} section`);
+            alert(`Navigerer til ${this.textContent}-seksjonen`);
         });
     });
     
     // Handle inquiry button click
     if (inquiryButton) {
         inquiryButton.addEventListener('click', function() {
-            alert(`Your inquiry to ${companyName} has been sent! A representative will contact you soon.`);
+            alert(`Din forespørsel til ${companyName} er sendt! En representant vil kontakte deg snart.`);
         });
     }
     
@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
     viewMoreLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            alert('Loading more projects...');
+            alert('Laster flere prosjekter...');
         });
     });
     
     // Add analytics tracking
-    console.log(`Company detail page viewed: ${companyName}`);
+    console.log(`Bedriftsdetaljside vist: ${companyName}`);
 });

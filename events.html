@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DiginConnect - Events</title>
+    <title>DiginConnect - Arrangementer</title>
     <link rel="stylesheet" href="css/events.css">
 </head>
 <body>
@@ -15,11 +15,11 @@
                 </a>
             </div>
             <div class="nav-menu">
-                <a href="feed.html" class="nav-item">Activity Feed</a>
-                <a href="events.html" class="nav-item active">Events</a>
-                <a href="messages.html" class="nav-item">Messages</a>
-                <a href="projects.html" class="nav-item">Projects</a>
-                <a href="companies.html" class="nav-item">Companies</a>
+                <a href="feed.html" class="nav-item">Aktivitetsfeed</a>
+                <a href="events.html" class="nav-item active">Arrangementer</a>
+                <a href="messages.html" class="nav-item">Meldinger</a>
+                <a href="projects.html" class="nav-item">Prosjekter</a>
+                <a href="companies.html" class="nav-item">Bedrifter</a>
             </div>
             <div class="user-profile">
                 <span>Daniel</span>
@@ -33,7 +33,7 @@
             <!-- Left Column - Filters & Calendar -->
             <div class="left-column">
                 <div class="section-header">
-                    <h2 class="section-title">Event Calendar</h2>
+                    <h2 class="section-title">Arrangementskalender</h2>
                 </div>
 
                 <div class="calendar-container">
@@ -43,7 +43,7 @@
                                 <polyline points="15 18 9 12 15 6"></polyline>
                             </svg>
                         </button>
-                        <span class="current-month" id="current-month-display">May 2025</span>
+                        <span class="current-month" id="current-month-display">Mai 2025</span>
                         <button class="calendar-nav-btn" id="next-month">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="9 18 15 12 9 6"></polyline>
@@ -52,13 +52,13 @@
                     </div>
                     
                     <div class="calendar-weekdays">
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thu</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
-                        <div>Sun</div>
+                        <div>Man</div>
+                        <div>Tir</div>
+                        <div>Ons</div>
+                        <div>Tor</div>
+                        <div>Fre</div>
+                        <div>Lør</div>
+                        <div>Søn</div>
                     </div>
                     
                     <div class="calendar-days" id="calendar-days">
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="section-header mt-30">
-                    <h2 class="section-title">Filters</h2>
+                    <h2 class="section-title">Filtre</h2>
                 </div>
 
                 <div class="filter-section">
@@ -77,39 +77,39 @@
                                 <circle cx="11" cy="11" r="8"></circle>
                                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                             </svg>
-                            <input type="text" placeholder="Search events..." id="search-input">
+                            <input type="text" placeholder="Søk etter arrangementer..." id="search-input">
                         </div>
                     </div>
                     
                     <div class="filter-group">
-                        <h3 class="filter-title">Event Type</h3>
+                        <h3 class="filter-title">Arrangementstype</h3>
                         <div class="filter-options">
                             <label class="checkbox-label">
                                 <input type="checkbox" value="workshop" checked> Workshop
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" value="conference" checked> Conference
+                                <input type="checkbox" value="conference" checked> Konferanse
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" value="networking" checked> Networking
+                                <input type="checkbox" value="networking" checked> Nettverksbygging
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" value="training" checked> Training
+                                <input type="checkbox" value="training" checked> Opplæring
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" value="other" checked> Other
+                                <input type="checkbox" value="other" checked> Annet
                             </label>
                         </div>
                     </div>
                     
                     <div class="filter-group">
-                        <h3 class="filter-title">Location</h3>
+                        <h3 class="filter-title">Sted</h3>
                         <div class="filter-options">
                             <label class="checkbox-label">
-                                <input type="checkbox" value="inperson" checked> In-person
+                                <input type="checkbox" value="inperson" checked> Fysisk
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" value="online" checked> Online
+                                <input type="checkbox" value="online" checked> På nett
                             </label>
                             <label class="checkbox-label">
                                 <input type="checkbox" value="hybrid" checked> Hybrid
@@ -118,7 +118,7 @@
                     </div>
                     
                     <div class="filter-group">
-                        <h3 class="filter-title">Companies</h3>
+                        <h3 class="filter-title">Bedrifter</h3>
                         <div class="filter-options">
                             <label class="checkbox-label">
                                 <input type="checkbox" value="crayon" checked> Crayon
@@ -133,20 +133,20 @@
                                 <input type="checkbox" value="digin" checked> Digin
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" value="other" checked> Other
+                                <input type="checkbox" value="other" checked> Andre
                             </label>
                         </div>
                     </div>
                     
-                    <button class="btn-primary filter-apply-btn">Apply Filters</button>
-                    <button class="btn-text filter-reset-btn">Reset</button>
+                    <button class="btn-primary filter-apply-btn">Bruk Filtre</button>
+                    <button class="btn-text filter-reset-btn">Nullstill</button>
                 </div>
             </div>
 
             <!-- Middle Column - Events List -->
             <div class="middle-column">
                 <div class="section-header">
-                    <h2 class="section-title">Upcoming Events</h2>
+                    <h2 class="section-title">Kommende arrangementer</h2>
                     <div class="view-options">
                         <button class="view-option-btn active" data-view="list">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -157,7 +157,7 @@
                                 <line x1="3" y1="12" x2="3.01" y2="12"></line>
                                 <line x1="3" y1="18" x2="3.01" y2="18"></line>
                             </svg>
-                            List
+                            Liste
                         </button>
                         <button class="view-option-btn" data-view="grid">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -166,23 +166,23 @@
                                 <rect x="14" y="14" width="7" height="7"></rect>
                                 <rect x="3" y="14" width="7" height="7"></rect>
                             </svg>
-                            Grid
+                            Rutenett
                         </button>
                     </div>
                 </div>
                 
                 <div class="events-list" id="events-list">
                     <!-- May events -->
-                    <div class="event-month-divider">May 2025</div>
+                    <div class="event-month-divider">Mai 2025</div>
                     
                     <div class="event-card" data-type="workshop" data-location="online" data-company="crayon">
                         <div class="event-date">
-                            <div class="event-month">May</div>
+                            <div class="event-month">Mai</div>
                             <div class="event-day">15</div>
                         </div>
                         <div class="event-details">
-                            <h3 class="event-name">Cloud Security Workshop</h3>
-                            <div class="event-organizer">Organized by Crayon</div>
+                            <h3 class="event-name">Workshop Om Skysikkerhet</h3>
+                            <div class="event-organizer">Arrangert av Crayon</div>
                             <div class="event-info">
                                 <div class="event-time">
                                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -196,13 +196,13 @@
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
-                                    <span>Online (Teams)</span>
+                                    <span>På nett (Teams)</span>
                                 </div>
                                 <div class="event-type" data-type="workshop">Workshop</div>
                             </div>
-                            <p class="event-description">Learn about the latest cloud security best practices and how to safeguard your infrastructure from emerging threats. This hands-on workshop will cover Azure and AWS security features.</p>
+                            <p class="event-description">Lær om de nyeste beste praksiser for skysikkerhet og hvordan beskytte infrastrukturen din mot nye trusler. Denne praktiske workshopen vil dekke sikkerhetsfunksjoner i Azure og AWS.</p>
                             <div class="event-actions">
-                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                                 <button class="btn-text event-share-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="18" cy="5" r="3"></circle>
@@ -211,37 +211,37 @@
                                         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                                     </svg>
-                                    Share
+                                    Del
                                 </button>
                                 <button class="btn-text event-reminder-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                                         <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                     </svg>
-                                    Remind me
+                                    Påminn meg
                                 </button>
                             </div>
                         </div>
                         <div class="event-attendees">
-                            <div class="attendee-count">18 people attending</div>
+                            <div class="attendee-count">18 personer deltar</div>
                             <div class="attendee-avatars">
                                 <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
                                 <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
                                 <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
                                 <div class="attendee-avatar attendee-more">+15</div>
                             </div>
-                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                            <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                         </div>
                     </div>
 
                     <div class="event-card" data-type="networking" data-location="inperson" data-company="webstep">
                         <div class="event-date">
-                            <div class="event-month">May</div>
+                            <div class="event-month">Mai</div>
                             <div class="event-day">22</div>
                         </div>
                         <div class="event-details">
-                            <h3 class="event-name">Tech Professionals Networking Evening</h3>
-                            <div class="event-organizer">Organized by Webstep</div>
+                            <h3 class="event-name">Nettverkskveld For IT-fagfolk</h3>
+                            <div class="event-organizer">Arrangert av Webstep</div>
                             <div class="event-info">
                                 <div class="event-time">
                                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -255,13 +255,13 @@
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
-                                    <span>Webstep Kristiansand Office</span>
+                                    <span>Webstep, Kristiansand</span>
                                 </div>
-                                <div class="event-type" data-type="networking">Networking</div>
+                                <div class="event-type" data-type="networking">Nettverksbygging</div>
                             </div>
-                            <p class="event-description">Join us for an evening of networking, light refreshments, and interesting discussions about technology trends and opportunities. Meet tech professionals from various industries and expand your network.</p>
+                            <p class="event-description">Bli med på en kveld med nettverksbygging, lett bevertning og interessante diskusjoner om teknologitrender og muligheter. Møt IT-fagfolk fra ulike bransjer og utvid nettverket ditt.</p>
                             <div class="event-actions">
-                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                                 <button class="btn-text event-share-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="18" cy="5" r="3"></circle>
@@ -270,40 +270,40 @@
                                         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                                     </svg>
-                                    Share
+                                    Del
                                 </button>
                                 <button class="btn-text event-reminder-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                                         <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                     </svg>
-                                    Remind me
+                                    Påminn meg
                                 </button>
                             </div>
                         </div>
                         <div class="event-attendees">
-                            <div class="attendee-count">32 people attending</div>
+                            <div class="attendee-count">32 personer deltar</div>
                             <div class="attendee-avatars">
                                 <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
                                 <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
                                 <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
                                 <div class="attendee-avatar attendee-more">+29</div>
                             </div>
-                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                            <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                         </div>
                     </div>
 
                     <!-- June events -->
-                    <div class="event-month-divider">June 2025</div>
+                    <div class="event-month-divider">Juni 2025</div>
                     
                     <div class="event-card" data-type="conference" data-location="inperson" data-company="digin">
                         <div class="event-date">
-                            <div class="event-month">Jun</div>
+                            <div class="event-month">Juni</div>
                             <div class="event-day">02</div>
                         </div>
                         <div class="event-details">
-                            <h3 class="event-name">DiginConnect Annual Conference</h3>
-                            <div class="event-organizer">Organized by Digin</div>
+                            <h3 class="event-name">DiginConnect Årlig Konferanse</h3>
+                            <div class="event-organizer">Arrangert av Digin</div>
                             <div class="event-info">
                                 <div class="event-time">
                                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -317,13 +317,13 @@
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
-                                    <span>Scandic Bystranda, Kristiansand</span>
+                                    <span>Scandic, Kristiansand</span>
                                 </div>
-                                <div class="event-type" data-type="conference">Conference</div>
+                                <div class="event-type" data-type="conference">Konferanse</div>
                             </div>
-                            <p class="event-description">Join us for the annual DiginConnect conference featuring keynote speakers, panel discussions, and networking opportunities. This year's theme is "Digital Innovation in Practice" with a focus on real-world implementation challenges and solutions.</p>
+                            <p class="event-description">Bli med på den årlige DiginConnect-konferansen med hovedtalere, paneldiskusjoner og nettverksmuligheter. Årets tema er "Digital innovasjon i praksis" med fokus på implementeringsutfordringer og løsninger i den virkelige verden.</p>
                             <div class="event-actions">
-                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                                 <button class="btn-text event-share-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="18" cy="5" r="3"></circle>
@@ -332,26 +332,26 @@
                                         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                                     </svg>
-                                    Share
+                                    Del
                                 </button>
                                 <button class="btn-text event-reminder-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                                         <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                     </svg>
-                                    Remind me
+                                    Påminn meg
                                 </button>
                             </div>
                         </div>
                         <div class="event-attendees">
-                            <div class="attendee-count">75 people attending</div>
+                            <div class="attendee-count">75 personer deltar</div>
                             <div class="attendee-avatars">
                                 <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
                                 <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
                                 <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
                                 <div class="attendee-avatar attendee-more">+72</div>
                             </div>
-                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                            <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                         </div>
                     </div>
 
@@ -362,7 +362,7 @@
                         </div>
                         <div class="event-details">
                             <h3 class="event-name">Azure DevOps Masterclass</h3>
-                            <div class="event-organizer">Organized by Egde</div>
+                            <div class="event-organizer">Arrangert av Egde</div>
                             <div class="event-info">
                                 <div class="event-time">
                                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -376,13 +376,13 @@
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
-                                    <span>Egde Office, Kristiansand (Hybrid)</span>
+                                    <span>Egde, Kristiansand (Hybrid)</span>
                                 </div>
                                 <div class="event-type" data-type="training">Training</div>
                             </div>
-                            <p class="event-description">A comprehensive training session on Azure DevOps, covering CI/CD pipelines, automated testing, and infrastructure as code. Suitable for developers, DevOps engineers, and IT professionals looking to enhance their cloud skills.</p>
+                            <p class="event-description">En omfattende opplæringsøkt om Azure DevOps som dekker CI/CD-pipelines, automatisert testing og infrastruktur som kode. Passer for utviklere, DevOps-ingeniører og IT-fagfolk som ønsker å forbedre skyferdighetene sine.</p>
                             <div class="event-actions">
-                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                                 <button class="btn-text event-share-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="18" cy="5" r="3"></circle>
@@ -391,31 +391,31 @@
                                         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                                     </svg>
-                                    Share
+                                    Del
                                 </button>
                                 <button class="btn-text event-reminder-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                                         <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                     </svg>
-                                    Remind me
+                                    Påminn meg
                                 </button>
                             </div>
                         </div>
                         <div class="event-attendees">
-                            <div class="attendee-count">24 people attending</div>
+                            <div class="attendee-count">24 personer deltar</div>
                             <div class="attendee-avatars">
                                 <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
                                 <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
                                 <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
                                 <div class="attendee-avatar attendee-more">+21</div>
                             </div>
-                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                            <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                         </div>
                     </div>
 
                     <!-- July events -->
-                    <div class="event-month-divider">July 2025</div>
+                    <div class="event-month-divider">Juli 2025</div>
                     
                     <div class="event-card" data-type="other" data-location="inperson" data-company="other">
                         <div class="event-date">
@@ -423,8 +423,8 @@
                             <div class="event-day">05</div>
                         </div>
                         <div class="event-details">
-                            <h3 class="event-name">Tech Industry Summer Gathering</h3>
-                            <div class="event-organizer">Organized by Local Tech Hub</div>
+                            <h3 class="event-name">Tech-Bransjens Sommertreff</h3>
+                            <div class="event-organizer">Arrangert av Digin</div>
                             <div class="event-info">
                                 <div class="event-time">
                                     <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -438,13 +438,13 @@
                                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                         <circle cx="12" cy="10" r="3"></circle>
                                     </svg>
-                                    <span>Bystranda Beach, Kristiansand</span>
+                                    <span>Bystranda, Kristiansand</span>
                                 </div>
-                                <div class="event-type" data-type="other">Social</div>
+                                <div class="event-type" data-type="other">Sosialt</div>
                             </div>
-                            <p class="event-description">An informal summer gathering for tech professionals in the region. Food, drinks, and activities provided. Bring your family and enjoy a relaxed afternoon with colleagues from the industry. Perfect opportunity to build connections in an informal setting.</p>
+                            <p class="event-description">Et uformelt sommertreff for tech-fagfolk i regionen. Mat, drikke og aktiviteter inkludert. Ta med familien og nyt en avslappende ettermiddag med kolleger fra bransjen. Perfekt mulighet til å bygge kontakter i uformelle omgivelser.</p>
                             <div class="event-actions">
-                                <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                                <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                                 <button class="btn-text event-share-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <circle cx="18" cy="5" r="3"></circle>
@@ -453,32 +453,32 @@
                                         <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                                         <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                                     </svg>
-                                    Share
+                                    Del
                                 </button>
                                 <button class="btn-text event-reminder-btn">
                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                                         <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
                                     </svg>
-                                    Remind me
+                                    Påminn meg
                                 </button>
                             </div>
                         </div>
                         <div class="event-attendees">
-                            <div class="attendee-count">48 people attending</div>
+                            <div class="attendee-count">48 personer deltar</div>
                             <div class="attendee-avatars">
                                 <div class="attendee-avatar" style="background-color: #5c6bc0;">S</div>
                                 <div class="attendee-avatar" style="background-color: #26a69a;">E</div>
                                 <div class="attendee-avatar" style="background-color: #ec407a;">M</div>
                                 <div class="attendee-avatar attendee-more">+45</div>
                             </div>
-                            <button class="btn-outline btn-sm event-rsvp-btn">RSVP</button>
+                            <button class="btn-outline btn-sm event-rsvp-btn">Delta</button>
                         </div>
                     </div>
                 </div>
                 
                 <button class="btn-text load-more-btn" id="load-more-btn">
-                    Load more events
+                    Last flere arrangementer
                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -492,34 +492,34 @@
                         <line x1="8" y1="2" x2="8" y2="6"></line>
                         <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    <h3>No events found</h3>
-                    <p>Try adjusting your filters or search criteria to find events that match your interests.</p>
-                    <button class="btn-primary" id="reset-filters-btn">Reset Filters</button>
+                    <h3>Ingen arrangementer funnet</h3>
+                    <p>Prøv å justere filtrene eller søket for å finne arrangementer som passer dine interesser.</p>
+                    <button class="btn-primary" id="reset-filters-btn">Nullstill filtre</button>
                 </div>
             </div>
 
             <!-- Right Column - My Events & Suggestions -->
             <div class="right-column">
                 <div class="section-header">
-                    <h2 class="section-title">Create an Event</h2>
+                    <h2 class="section-title">Opprett arrangement</h2>
                 </div>
             
                 <div class="create-event-card">
-                    <p>Organize your own event and invite your network</p>
+                    <p>Organiser ditt eget arrangement og inviter nettverket ditt</p>
                     <button class="btn-primary btn-sm create-event-btn">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="12" y1="8" x2="12" y2="16"></line>
                             <line x1="8" y1="12" x2="16" y2="12"></line>
                         </svg>
-                        Create Event
+                        Opprett arrangement
                     </button>
                 </div>
             
                 <div class="section-header mt-30">
-                    <h2 class="section-title">My Events</h2>
+                    <h2 class="section-title">Mine arrangementer</h2>
                     <button class="btn-text view-all-link">
-                        Manage
+                        Administrer
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="9 6 15 12 9 18"></polyline>
                         </svg>
@@ -529,14 +529,14 @@
                 <div class="my-events-list">
                     <div class="my-event-card attending">
                         <div class="rec-event-date">
-                            <div class="event-month">May</div>
+                            <div class="event-month">Mai</div>
                             <div class="event-day">15</div>
                         </div>
                         <div class="my-event-details">
-                            <h3 class="my-event-name">Cloud Security Workshop</h3>
+                            <h3 class="my-event-name">Workshop om skysikkerhet</h3>
                             <div class="my-event-info">
                                 <span class="event-time-mini">10:00 - 12:30</span>
-                                <span class="attendance-status">Attending</span>
+                                <span class="attendance-status">Deltar</span>
                             </div>
                         </div>
                     </div>
@@ -547,10 +547,10 @@
                             <div class="event-day">02</div>
                         </div>
                         <div class="my-event-details">
-                            <h3 class="my-event-name">DiginConnect Annual Conference</h3>
+                            <h3 class="my-event-name">DiginConnect årlig konferanse</h3>
                             <div class="my-event-info">
                                 <span class="event-time-mini">09:00 - 17:00</span>
-                                <span class="attendance-status">Attending</span>
+                                <span class="attendance-status">Deltar</span>
                             </div>
                         </div>
                     </div>
@@ -561,17 +561,17 @@
                             <div class="event-day">14</div>
                         </div>
                         <div class="my-event-details">
-                            <h3 class="my-event-name">Azure DevOps Masterclass</h3>
+                            <h3 class="my-event-name">Azure DevOps masterclass</h3>
                             <div class="my-event-info">
                                 <span class="event-time-mini">13:00 - 16:00</span>
-                                <span class="attendance-status">Pending</span>
+                                <span class="attendance-status">Avventer</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="section-header mt-30">
-                    <h2 class="section-title">Recommended Events</h2>
+                    <h2 class="section-title">Anbefalte arrangementer</h2>
                 </div>
                 
                 <div class="recommended-events">
@@ -581,11 +581,11 @@
                                 <div class="event-month">Jul</div>
                                 <div class="event-day">18</div>
                             </div>
-                            <div class="rec-event-type" data-type="networking">Networking</div>
+                            <div class="rec-event-type" data-type="networking">Nettverksbygging</div>
                         </div>
-                        <h3 class="rec-event-name">Tech Startup Meetup</h3>
+                        <h3 class="rec-event-name">Tech Meetup</h3>
                         <div class="rec-event-info">
-                            <div class="rec-event-organizer">By Innovasjon Norge</div>
+                            <div class="rec-event-organizer">Av Innovasjon Norge</div>
                             <div class="rec-event-location">
                                 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
@@ -594,7 +594,7 @@
                                 Oslo
                             </div>
                         </div>
-                        <button class="btn-outline btn-sm btn-block">RSVP</button>
+                        <button class="btn-outline btn-sm btn-block">Delta</button>
                     </div>
 
                     <div class="recommended-event">
@@ -603,20 +603,20 @@
                                 <div class="event-month">Aug</div>
                                 <div class="event-day">05</div>
                             </div>
-                            <div class="rec-event-type" data-type="training">Training</div>
+                            <div class="rec-event-type" data-type="training">Opplæring</div>
                         </div>
                         <h3 class="rec-event-name">AWS Certification Prep</h3>
                         <div class="rec-event-info">
-                            <div class="rec-event-organizer">By Crayon</div>
+                            <div class="rec-event-organizer">Av Crayon</div>
                             <div class="rec-event-location">
                                 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                Online
+                                På nett
                             </div>
                         </div>
-                        <button class="btn-outline btn-sm btn-block">RSVP</button>
+                        <button class="btn-outline btn-sm btn-block">Delta</button>
                     </div>
 
                     <div class="recommended-event">
@@ -625,20 +625,20 @@
                                 <div class="event-month">Aug</div>
                                 <div class="event-day">22</div>
                             </div>
-                            <div class="rec-event-type" data-type="conference">Conference</div>
+                            <div class="rec-event-type" data-type="conference">Konferanse</div>
                         </div>
-                        <h3 class="rec-event-name">Future of Work Summit</h3>
+                        <h3 class="rec-event-name">Fremtidens Arbeidsplass</h3>
                         <div class="rec-event-info">
-                            <div class="rec-event-organizer">By Microsoft Norway</div>
+                            <div class="rec-event-organizer">Av Digin</div>
                             <div class="rec-event-location">
                                 <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
-                                Stavanger
+                                Kristiansand
                             </div>
                         </div>
-                        <button class="btn-outline btn-sm btn-block">RSVP</button>
+                        <button class="btn-outline btn-sm btn-block">Delta</button>
                     </div>
                 </div>
             </div>
